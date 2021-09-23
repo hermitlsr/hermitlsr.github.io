@@ -1,0 +1,433 @@
+<!--
+
+██╗  ██╗███████╗██████╗ ███╗   ███╗██╗████████╗██╗     ███████╗███████╗
+██║  ██║██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██║     ██╔════╝██╔════╝
+███████║█████╗  ██████╔╝██╔████╔██║██║   ██║   ██║     █████╗  █████╗
+██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║   ██║     ██╔══╝  ██╔══╝
+██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║   ██║   ███████╗███████╗███████╗
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝
+
+* ░░░░░░░░░░░░░░░░░░░░░░░░▄░░
+* ░░░░░░░░░▐█░░░░░░░░░░░▄▀▒▌░
+* ░░░░░░░░▐▀▒█░░░░░░░░▄▀▒▒▒▐
+* ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+* ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+* ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
+* ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒
+* ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+* ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄
+* ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒
+* ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒
+
+　　              《蒹葭》
+
+          先秦· 《诗经·国风·秦风》
+
+　　蒹葭苍苍，白露为霜。所谓伊人，在水一方。
+
+　　溯洄从之，道阻且长。溯游从之，宛在水中央。
+
+　　蒹葭萋萋，白露未晞。所谓伊人，在水之湄。
+
+　　溯洄从之，道阻且跻。溯游从之，宛在水中坻。
+
+　　蒹葭采采，白露未已。所谓伊人，在水之涘。
+
+　　溯洄从之，道阻且右。溯游从之，宛在水中沚。
+
+
+我现在有两件事，一件事是考研，另一件事也是考研。
+
+#######################################################
+即得易见平凡，仿照上例显然。留作习题答案略，读者自证不难。
+反之亦然同理，推论自然成立，略去过程 Q E D，由上可知证毕。
+-->
+
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?190ce95d54ce32d0d767e1d96e3e1ad7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<head>
+  <!-- 谷歌站点验证 -->
+  <meta name="google-site-verification" content="jyK8ig65NSyIhRJGkI_mRSDH46ZbLic9TZBLlaXY7II" />
+  <!-- 百度站点验证 -->
+  <meta name="baidu-site-verification" content="code-AAFd9gcXEW" />
+  <!-- 百度主动推送 -->
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <meta name="generator" content="Hexo 5.4.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>R-notes：图形功能 - HERMITLEE</title>
+
+  
+    <meta name="description" content="高级绘图函数  向日葵花型图 sunflowerplot 以相似坐标的点作为花朵，其花瓣数目为点的个数 123456789101112131415161718192021222324252627282930313233343536## my understandx &lt;- rep(2, 10);y &lt;- rep(2, 10)sunflowerplot(x, y)x &lt;- rep(">
+<meta property="og:type" content="website">
+<meta property="og:title" content="图形功能">
+<meta property="og:url" content="https://www.hermitlsr.top/wiki/R-notes/graphics-function/">
+<meta property="og:site_name" content="HERMITLEE">
+<meta property="og:description" content="高级绘图函数  向日葵花型图 sunflowerplot 以相似坐标的点作为花朵，其花瓣数目为点的个数 123456789101112131415161718192021222324252627282930313233343536## my understandx &lt;- rep(2, 10);y &lt;- rep(2, 10)sunflowerplot(x, y)x &lt;- rep(">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-29T12:00:03.031Z">
+<meta property="article:modified_time" content="2021-08-29T12:00:03.031Z">
+<meta property="article:author" content="hermitlee">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="HERMITLEE" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/rick32.png">
+  
+
+  
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='wiki'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki/"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/R-notes/"><div class="main">R语言笔记</div><div class="sub cap">从初等到进阶</div></a></div>
+</header>
+
+<div class="widgets">
+
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">课程笔记</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/R-notes/"><span class="toc-text">数据结构</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/R-notes/probability-distribution/"><span class="toc-text">概率分布</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/R-notes/parameter-estimation/"><span class="toc-text">参数估计</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/R-notes/graphics-function/"><span class="toc-text">图形功能</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E7%BB%98%E5%9B%BE%E5%87%BD%E6%95%B0"><span class="toc-text"> 高级绘图函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E6%97%A5%E8%91%B5%E8%8A%B1%E5%9E%8B%E5%9B%BE"><span class="toc-text"> 向日葵花型图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A5%BC%E5%9B%BE-%E7%AE%B1%E5%9B%BE"><span class="toc-text"> 饼图、箱图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stripchart-%E5%B0%86x%E7%94%BB%E5%9C%A8%E4%B8%80%E6%9D%A1%E7%9B%B4%E7%BA%BF%E4%B8%8A"><span class="toc-text"> stripchart() 将x画在一条直线上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#coplotx~yz%E7%BB%99%E5%AE%9Az%E7%BB%98%E5%88%B6xy%E7%9A%84%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="toc-text"> coplot(x~y|z)给定z绘制(x,y)的散点图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#interactionplotf1-f2-y-funmean"><span class="toc-text"> interaction.plot(f1, f2, y, fun&#x3D;mean)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matplot"><span class="toc-text"> matplot()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dotcharx"><span class="toc-text"> dotchar(x)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pairsx"><span class="toc-text"> pairs(x)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE"><span class="toc-text"> 直方图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="toc-text"> 条形图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%9F%E5%9B%BE-stars"><span class="toc-text"> 星图 stars()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E9%80%89%E9%A1%B9"><span class="toc-text"> 绘图选项</span></a></li></ol></div></div></div>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+  
+  
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">HERMITLEE</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/R-notes/">R语言笔记</a></div><div id="post-meta">更新于&nbsp;<time datetime="2021-08-29T12:00:03.031Z">2021年8月29日</time></div></div>
+
+  <article class='content md wiki'>
+  <h1 class="article-title"><span>图形功能</span></h1>
+  <h2 id="高级绘图函数"><a class="markdownIt-Anchor" href="#高级绘图函数"></a> 高级绘图函数</h2>
+<h3 id="向日葵花型图"><a class="markdownIt-Anchor" href="#向日葵花型图"></a> 向日葵花型图</h3>
+<p><code>sunflowerplot</code></p>
+<p>以相似坐标的点作为花朵，其花瓣数目为点的个数</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## my understand</span></span><br><span class="line">x &lt;- <span class="built_in">rep</span>(<span class="number">2</span>, <span class="number">10</span>);y &lt;- <span class="built_in">rep</span>(<span class="number">2</span>, <span class="number">10</span>)</span><br><span class="line">sunflowerplot(x, y)</span><br><span class="line"></span><br><span class="line">x &lt;- <span class="built_in">rep</span>(<span class="number">2</span>, <span class="number">10</span>);y &lt;- <span class="built_in">rep</span>(<span class="number">3</span>, <span class="number">10</span>)</span><br><span class="line">sunflowerplot(x, y)</span><br><span class="line"></span><br><span class="line">x &lt;- <span class="built_in">rep</span>(<span class="number">1</span>:<span class="number">5</span>, <span class="number">5</span>); y &lt;- <span class="built_in">rep</span>(<span class="number">3</span>, <span class="number">25</span>)</span><br><span class="line">sunflowerplot(x, y)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 实例</span></span><br><span class="line">require(stats) <span class="comment"># for rnorm</span></span><br><span class="line">require(grDevices)</span><br><span class="line"></span><br><span class="line"><span class="comment">## &#x27;number&#x27; is computed automatically:</span></span><br><span class="line">sunflowerplot(iris[, <span class="number">3</span>:<span class="number">4</span>])</span><br><span class="line"><span class="comment">## Imitating Chambers et al, p.109, closely:</span></span><br><span class="line">sunflowerplot(iris[, <span class="number">3</span>:<span class="number">4</span>], cex = <span class="number">.2</span>, cex.fact = <span class="number">1</span>, size = <span class="number">.035</span>, seg.lwd = <span class="number">.8</span>)</span><br><span class="line"><span class="comment">## or</span></span><br><span class="line">sunflowerplot(Petal.Width ~ Petal.Length, data = iris,</span><br><span class="line">              cex = <span class="number">.2</span>, cex.fact = <span class="number">1</span>, size = <span class="number">.035</span>, seg.lwd = <span class="number">.8</span>)</span><br><span class="line"></span><br><span class="line">sunflowerplot(x = sort(<span class="number">2</span>*<span class="built_in">round</span>(rnorm(<span class="number">100</span>))), y = <span class="built_in">round</span>(rnorm(<span class="number">100</span>), <span class="number">0</span>),</span><br><span class="line">              main = <span class="string">&quot;Sunflower Plot of Rounded N(0,1)&quot;</span>)</span><br><span class="line"><span class="comment">## Similarly using a &quot;xyTable&quot; argument:</span></span><br><span class="line">xyT &lt;- xyTable(x = sort(<span class="number">2</span>*<span class="built_in">round</span>(rnorm(<span class="number">100</span>))), y = <span class="built_in">round</span>(rnorm(<span class="number">100</span>), <span class="number">0</span>),</span><br><span class="line">               digits = <span class="number">3</span>)</span><br><span class="line">utils::str(xyT, vec.len = <span class="number">20</span>)</span><br><span class="line">sunflowerplot(xyT, main = <span class="string">&quot;2nd Sunflower Plot of Rounded N(0,1)&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">## A &#x27;marked point process&#x27; &#123;explicit &#x27;number&#x27; argument&#125;:</span></span><br><span class="line">sunflowerplot(rnorm(<span class="number">100</span>), rnorm(<span class="number">100</span>), number = rpois(n = <span class="number">100</span>, lambda = <span class="number">2</span>),</span><br><span class="line">              main = <span class="string">&quot;Sunflower plot (marked point process)&quot;</span>,</span><br><span class="line">              rotate = <span class="literal">TRUE</span>, col = <span class="string">&quot;blue4&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="饼图-箱图"><a class="markdownIt-Anchor" href="#饼图-箱图"></a> 饼图、箱图</h3>
+<p>饼图不宜多用，一般用于比较各部分的占比情况</p>
+<p>箱图常用于同一类数据的比较，可以看到数据分布和数据量，有横向和纵向两种。</p>
+<p>对于图像的颜色填充可使用<code>rainbow()</code>设定</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">require(grDevices)</span><br><span class="line">pie(<span class="built_in">rep</span>(<span class="number">1</span>, <span class="number">24</span>), col = rainbow(<span class="number">24</span>), radius = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">pie.sales &lt;- <span class="built_in">c</span>(<span class="number">0.12</span>, <span class="number">0.3</span>, <span class="number">0.26</span>, <span class="number">0.16</span>, <span class="number">0.04</span>, <span class="number">0.12</span>)</span><br><span class="line"><span class="built_in">names</span>(pie.sales)&lt;-<span class="built_in">c</span>(<span class="string">&quot;Blueberry&quot;</span>,<span class="string">&quot;Cherry&quot;</span>,<span class="string">&quot;Apple&quot;</span>, <span class="string">&quot;Boston Cream&quot;</span>, <span class="string">&quot;Other&quot;</span>, <span class="string">&quot;Vanilla Cream&quot;</span>)</span><br><span class="line">pie(pie.sales) <span class="comment"># default colours</span></span><br><span class="line"></span><br><span class="line">pie(pie.sales, density = <span class="number">10</span>, angle = <span class="number">15</span> + <span class="number">10</span> * <span class="number">1</span>:<span class="number">6</span>)</span><br><span class="line"></span><br><span class="line">pie(pie.sales, clockwise = <span class="literal">TRUE</span>, main = <span class="string">&quot;pie(*, clockwise = TRUE)&quot;</span>)</span><br><span class="line"></span><br><span class="line">segments(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, col = <span class="string">&quot;red&quot;</span>, lwd = <span class="number">2</span>)</span><br><span class="line">text(<span class="number">0</span>, <span class="number">1</span>, <span class="string">&quot;init.angle = 90&quot;</span>, col = <span class="string">&quot;red&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 另一个例子</span></span><br><span class="line"></span><br><span class="line">par(mfrow = <span class="built_in">c</span>(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line">slices &lt;- <span class="built_in">c</span>(<span class="number">10</span>,<span class="number">12</span>,<span class="number">4</span>,<span class="number">16</span>,<span class="number">8</span>)  <span class="comment"># 数据</span></span><br><span class="line">lbls &lt;- <span class="built_in">c</span>(<span class="string">&quot;US&quot;</span>,<span class="string">&quot;UK&quot;</span>,<span class="string">&quot;Australis&quot;</span>,<span class="string">&quot;Germany&quot;</span>,<span class="string">&quot;France&quot;</span>)  <span class="comment"># 标签数据</span></span><br><span class="line">pie(slices,lbls)  <span class="comment"># 基本饼图</span></span><br><span class="line"></span><br><span class="line">pct &lt;- <span class="built_in">round</span>(slices/<span class="built_in">sum</span>(slices)*<span class="number">100</span>)  <span class="comment"># 数据比例</span></span><br><span class="line">lbls2 &lt;- paste(lbls,<span class="string">&quot; &quot;</span>,pct ,<span class="string">&quot;%&quot;</span>,sep = <span class="string">&quot;&quot;</span>)</span><br><span class="line">pie(slices,labels = lbls2,col = rainbow(<span class="built_in">length</span>(lbls2)),  <span class="comment"># rainbow是一个彩虹色调色板</span></span><br><span class="line">    main = <span class="string">&quot;Pie Chart with Percentages&quot;</span>)</span><br><span class="line"></span><br><span class="line">library(plotrix)</span><br><span class="line">pie3D(slices,labels=lbls,explode=<span class="number">0.1</span>,main=<span class="string">&quot;3D pie chart&quot;</span>)  <span class="comment"># 三维饼图</span></span><br><span class="line"></span><br><span class="line">mytable &lt;- table (state.region)</span><br><span class="line">lbls3 &lt;- paste(<span class="built_in">names</span>(mytable),<span class="string">&quot;\n&quot;</span>,mytable,sep = <span class="string">&quot;&quot;</span>)</span><br><span class="line">pie(mytable,labels = lbls3,</span><br><span class="line">    main = <span class="string">&quot;pie  chart from a table \n (with sample sizes&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">boxplot(mtcars$mpg,main=<span class="string">&quot;Box plot&quot;</span>,</span><br><span class="line">        ylab =<span class="string">&quot;Miles per Gallon&quot;</span>)  <span class="comment"># 标准箱线图</span></span><br><span class="line"></span><br><span class="line">boxplot(mpg ~ cyl,data= mtcars,</span><br><span class="line">       main=<span class="string">&quot;car milesge data&quot;</span>,</span><br><span class="line">       xlab= <span class="string">&quot;Number of cylinders&quot;</span>,</span><br><span class="line">       ylab= <span class="string">&quot;Miles per Gallon&quot;</span>)</span><br><span class="line"></span><br><span class="line">boxplot(mpg ~ cyl,data= mtcars,</span><br><span class="line">        notch=<span class="literal">TRUE</span>,  <span class="comment"># 含有凹槽的箱线图</span></span><br><span class="line">        varwidth = <span class="literal">TRUE</span>,  <span class="comment"># 宽度和样本大小成正比</span></span><br><span class="line">        col= <span class="string">&quot;red&quot;</span>,</span><br><span class="line">        main=<span class="string">&quot;car milesge data&quot;</span>,</span><br><span class="line">        xlab= <span class="string">&quot;Number of cylinders&quot;</span>,</span><br><span class="line">        ylab= <span class="string">&quot;Miles per Gallon&quot;</span>)</span><br><span class="line"></span><br><span class="line">mtcars$cyl.f&lt;- factor(mtcars$cyl,  <span class="comment"># 转换成因子结构</span></span><br><span class="line">                      levels= <span class="built_in">c</span>(<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>),</span><br><span class="line">                      labels = <span class="built_in">c</span>(<span class="string">&quot;4&quot;</span>,<span class="string">&quot;6&quot;</span>,<span class="string">&quot;8&quot;</span>))</span><br><span class="line">mtcars$am.f &lt;- factor(mtcars$am,levels = <span class="built_in">c</span>(<span class="number">0</span>,<span class="number">1</span>),</span><br><span class="line">                      labels = <span class="built_in">c</span>(<span class="string">&quot;auto&quot;</span>,<span class="string">&quot;standard&quot;</span>))</span><br><span class="line">boxplot(mpg~ am.f*cyl.f,  <span class="comment"># 分组的箱线图</span></span><br><span class="line">        data = mtcars,</span><br><span class="line">        varwidth=<span class="literal">TRUE</span>,</span><br><span class="line">        col= <span class="built_in">c</span>(<span class="string">&quot;gold&quot;</span>,<span class="string">&quot;darkgreen&quot;</span>),</span><br><span class="line">        main= <span class="string">&quot;MPG Distribution by Auto Type&quot;</span>,</span><br><span class="line">        xlab=<span class="string">&quot;Auto Type&quot;</span>,</span><br><span class="line">        ylxb=<span class="string">&quot;Miles per Gallon&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">boxplot(len ~ dose, data = ToothGrowth,</span><br><span class="line">                boxwex = <span class="number">0.25</span>, at = <span class="number">1</span>:<span class="number">3</span> - <span class="number">0.2</span>,</span><br><span class="line">                subset = supp == <span class="string">&quot;VC&quot;</span>, col = <span class="string">&quot;yellow&quot;</span>,</span><br><span class="line">                main = <span class="string">&quot;Guinea Pigs&#x27; Tooth Growth&quot;</span>,</span><br><span class="line">                xlab = <span class="string">&quot;Vitamin C dose mg&quot;</span>,</span><br><span class="line">                ylab = <span class="string">&quot;tooth length&quot;</span>,</span><br><span class="line">                xlim = <span class="built_in">c</span>(<span class="number">0.5</span>, <span class="number">3.5</span>), ylim = <span class="built_in">c</span>(<span class="number">0</span>, <span class="number">35</span>),</span><br><span class="line">                yaxs = <span class="string">&quot;i&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">boxplot(len ~ dose, data = ToothGrowth, add = <span class="literal">TRUE</span>,</span><br><span class="line">        boxwex = <span class="number">0.25</span>, at = <span class="number">1</span>:<span class="number">3</span> + <span class="number">0.2</span>,</span><br><span class="line">        subset = supp == <span class="string">&quot;OJ&quot;</span>, col = <span class="string">&quot;orange&quot;</span>)</span><br><span class="line">legend(<span class="number">2</span>, <span class="number">9</span>, <span class="built_in">c</span>(<span class="string">&quot;Ascorbic acid&quot;</span>, <span class="string">&quot;Orange juice&quot;</span>),</span><br><span class="line">       fill = <span class="built_in">c</span>(<span class="string">&quot;yellow&quot;</span>, <span class="string">&quot;orange&quot;</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">boxplot(len ~ dose:supp, data = ToothGrowth,</span><br><span class="line">        boxwex = <span class="number">0.5</span>, col = <span class="built_in">c</span>(<span class="string">&quot;orange&quot;</span>, <span class="string">&quot;yellow&quot;</span>),</span><br><span class="line">        main = <span class="string">&quot;Guinea Pigs&#x27; Tooth Growth&quot;</span>,</span><br><span class="line">        xlab = <span class="string">&quot;Vitamin C dose mg&quot;</span>, ylab = <span class="string">&quot;tooth length&quot;</span>,</span><br><span class="line">        sep = <span class="string">&quot;:&quot;</span>, lex.order = <span class="literal">TRUE</span>, </span><br><span class="line">        ylim = <span class="built_in">c</span>(<span class="number">0</span>, <span class="number">35</span>), yaxs = <span class="string">&quot;i&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="stripchart-将x画在一条直线上"><a class="markdownIt-Anchor" href="#stripchart-将x画在一条直线上"></a> <code>stripchart()</code> 将x画在一条直线上</h3>
+<p>对于数据量较小时可以作为箱型图的替代</p>
+<p><code>stripchart(x, data = NULL, dlab = NULL, ...,subset, na.action = NULL)</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- stats::rnorm(<span class="number">50</span>)</span><br><span class="line">xr &lt;- <span class="built_in">round</span>(x, <span class="number">1</span>)</span><br><span class="line">stripchart(x) ; m &lt;- mean(par(<span class="string">&quot;usr&quot;</span>)[<span class="number">1</span>:<span class="number">2</span>])</span><br><span class="line">text(m, <span class="number">1.04</span>, <span class="string">&quot;stripchart(x, \&quot;overplot\&quot;)&quot;</span>)</span><br><span class="line">stripchart(xr, method = <span class="string">&quot;stack&quot;</span>, add = <span class="literal">TRUE</span>, at = <span class="number">1.2</span>)</span><br><span class="line">text(m, <span class="number">1.35</span>, <span class="string">&quot;stripchart(round(x,1), \&quot;stack\&quot;)&quot;</span>)</span><br><span class="line">stripchart(xr, method = <span class="string">&quot;jitter&quot;</span>, add = <span class="literal">TRUE</span>, at = <span class="number">0.7</span>)</span><br><span class="line">text(m, <span class="number">0.85</span>, <span class="string">&quot;stripchart(round(x,1), \&quot;jitter\&quot;)&quot;</span>)</span><br><span class="line"></span><br><span class="line">stripchart(decrease ~ treatment,</span><br><span class="line">    main = <span class="string">&quot;stripchart(OrchardSprays)&quot;</span>,</span><br><span class="line">    vertical = <span class="literal">TRUE</span>, <span class="built_in">log</span> = <span class="string">&quot;y&quot;</span>, data = OrchardSprays)</span><br><span class="line"></span><br><span class="line">stripchart(decrease ~ treatment, at = <span class="built_in">c</span>(<span class="number">1</span>:<span class="number">8</span>)^<span class="number">2</span>,</span><br><span class="line">    main = <span class="string">&quot;stripchart(OrchardSprays)&quot;</span>,</span><br><span class="line">    vertical = <span class="literal">TRUE</span>, <span class="built_in">log</span> = <span class="string">&quot;y&quot;</span>, data = OrchardSprays)</span><br></pre></td></tr></table></figure>
+<h3 id="coplotx~yz给定z绘制xy的散点图"><a class="markdownIt-Anchor" href="#coplotx~yz给定z绘制xy的散点图"></a> <code>coplot(x~y|z)</code>给定z绘制(x,y)的散点图</h3>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Tonga Trench Earthquakes</span></span><br><span class="line">coplot(lat ~ long | depth, data = quakes)</span><br><span class="line">given.depth &lt;- co.intervals(quakes$depth, number = <span class="number">4</span>, overlap = <span class="number">.1</span>)</span><br><span class="line">coplot(lat ~ long | depth, data = quakes, given.v = given.depth, rows = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">## Conditioning on 2 variables:</span></span><br><span class="line">ll.dm &lt;- lat ~ long | depth * mag</span><br><span class="line">coplot(ll.dm, data = quakes)</span><br><span class="line">coplot(ll.dm, data = quakes, number = <span class="built_in">c</span>(<span class="number">4</span>, <span class="number">7</span>), show.given = <span class="built_in">c</span>(<span class="literal">TRUE</span>, <span class="literal">FALSE</span>))</span><br><span class="line">coplot(ll.dm, data = quakes, number = <span class="built_in">c</span>(<span class="number">3</span>, <span class="number">7</span>),</span><br><span class="line">       overlap = <span class="built_in">c</span>(-<span class="number">.5</span>, <span class="number">.1</span>)) <span class="comment"># negative overlap DROPS values</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## given two factors</span></span><br><span class="line">Index &lt;- seq(<span class="built_in">length</span> = nrow(warpbreaks)) <span class="comment"># to get nicer default labels</span></span><br><span class="line">coplot(breaks ~ Index | wool * tension, data = warpbreaks,</span><br><span class="line">       show.given = <span class="number">0</span>:<span class="number">1</span>)</span><br><span class="line">coplot(breaks ~ Index | wool * tension, data = warpbreaks,</span><br><span class="line">       col = <span class="string">&quot;red&quot;</span>, bg = <span class="string">&quot;pink&quot;</span>, pch = <span class="number">21</span>,</span><br><span class="line">       bar.bg = <span class="built_in">c</span>(fac = <span class="string">&quot;light blue&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">## Example with empty panels:</span></span><br><span class="line"></span><br><span class="line">win.graph()</span><br><span class="line">with(data.frame(state.x77), &#123;</span><br><span class="line">coplot(Life.Exp ~ Income | Illiteracy * state.region, number = <span class="number">3</span>,</span><br><span class="line">       panel = <span class="keyword">function</span>(x, y, ...) panel.smooth(x, y, span = <span class="number">.8</span>, ...))</span><br><span class="line"><span class="comment">## y ~ factor -- not really sensible, but &#x27;show off&#x27;:</span></span><br><span class="line">coplot(Life.Exp ~ state.region | Income * state.division,</span><br><span class="line">       panel = panel.smooth)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="interactionplotf1-f2-y-funmean"><a class="markdownIt-Anchor" href="#interactionplotf1-f2-y-funmean"></a> <code>interaction.plot(f1, f2, y, fun=mean)</code></h3>
+<p>以f1(因子)为横坐标，fun(y|f2)为纵坐标绘制相应的f2(因子)的图像</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">require(graphics)</span><br><span class="line"></span><br><span class="line">with(ToothGrowth, &#123;</span><br><span class="line">interaction.plot(dose, supp, len, fixed = <span class="literal">TRUE</span>)</span><br><span class="line">dose &lt;- ordered(dose)</span><br><span class="line">interaction.plot(dose, supp, len, fixed = <span class="literal">TRUE</span>, col = <span class="number">2</span>:<span class="number">3</span>, leg.bty = <span class="string">&quot;o&quot;</span>)</span><br><span class="line">interaction.plot(dose, supp, len, fixed = <span class="literal">TRUE</span>, col = <span class="number">2</span>:<span class="number">3</span>, type = <span class="string">&quot;p&quot;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">with(OrchardSprays, &#123;</span><br><span class="line">  interaction.plot(treatment, rowpos, decrease)</span><br><span class="line">  interaction.plot(rowpos, treatment, decrease, cex.axis = <span class="number">0.8</span>)</span><br><span class="line">  <span class="comment">## order the rows by their mean effect</span></span><br><span class="line">  rowpos &lt;- factor(rowpos,</span><br><span class="line">                   levels = sort.list(tapply(decrease, rowpos, mean)))</span><br><span class="line">  interaction.plot(rowpos, treatment, decrease, col = <span class="number">2</span>:<span class="number">9</span>, lty = <span class="number">1</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="matplot"><a class="markdownIt-Anchor" href="#matplot"></a> <code>matplot()</code></h3>
+<p>二元图，x的第一列对应y的第一列，以此类推绘制图像</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- matrix(<span class="built_in">rep</span>(<span class="number">1</span>:<span class="number">10</span>, <span class="number">5</span>), ncol = <span class="number">5</span>)</span><br><span class="line">y &lt;- matrix(seq(<span class="number">50</span>), ncol = <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">matplot(x, y, type = <span class="string">&quot;l&quot;</span>, lty = <span class="number">1</span>:<span class="number">5</span>, col=rainbow(<span class="number">30</span>), lwd = <span class="number">2</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="dotcharx"><a class="markdownIt-Anchor" href="#dotcharx"></a> <code>dotchar(x)</code></h3>
+<p>x为数据框，点图(逐行逐列累加图)</p>
+<p><code>dotchart(x, labels = NULL, groups = NULL, gdata = NULL,cex = par(&quot;cex&quot;), pt.cex = cex,pch = 21, gpch = 21, bg = par(&quot;bg&quot;),color = par(&quot;fg&quot;), gcolor = par(&quot;fg&quot;),lcolor = &quot;gray&quot;,xlim = range(x[is.finite(x)]), main = NULL, xlab = NULL, ylab = NULL, ...)</code></p>
+<p>具体可参见：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/moxigandashu/article/details/53383041">https://blog.csdn.net/moxigandashu/article/details/53383041</a></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 例1</span></span><br><span class="line">dotchart(VADeaths, main = <span class="string">&quot;Death Rates in Virginia - 1940&quot;</span>)</span><br><span class="line">op &lt;- par(xaxs = <span class="string">&quot;i&quot;</span>)  <span class="comment"># 0 -- 100%</span></span><br><span class="line">dotchart(t(VADeaths), xlim = <span class="built_in">c</span>(<span class="number">0</span>,<span class="number">100</span>),</span><br><span class="line">         main = <span class="string">&quot;Death Rates in Virginia - 1940&quot;</span>)</span><br><span class="line">par(op)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 例2 </span></span><br><span class="line">dotchart(mtcars$mpg,labels = row.names(mtcars),cex= <span class="number">.7</span>,</span><br><span class="line">         main = <span class="string">&quot;Gas Mileage for Car Models&quot;</span>,</span><br><span class="line">         xlab = <span class="string">&quot;Miles Per gallon&quot;</span>)</span><br><span class="line"></span><br><span class="line">x &lt;- mtcars[order(mtcars$mpg),]        <span class="comment">#按照mpg排序</span></span><br><span class="line">x$cyl &lt;-factor(x$cyl)      <span class="comment">#将cyl变成因子数据结构类型</span></span><br><span class="line">x$color[x$cyl==<span class="number">4</span>] &lt;-<span class="string">&quot;red&quot;</span>   <span class="comment">#新建一个color变量，油缸数cyl不同，颜色不同</span></span><br><span class="line">x$color[x$cyl==<span class="number">6</span>] &lt;-<span class="string">&quot;blue&quot;</span></span><br><span class="line">x$color[x$cyl==<span class="number">8</span>] &lt;-<span class="string">&quot;darkgreen&quot;</span></span><br><span class="line">dotchart(x$mpg,        <span class="comment">#数据对象</span></span><br><span class="line">         labels = row.names(x),     <span class="comment">#标签</span></span><br><span class="line">         cex = <span class="number">.7</span>,<span class="comment">#字体大小</span></span><br><span class="line">         groups = x$cyl,      <span class="comment">#按照cyl分组</span></span><br><span class="line">         gcolor = <span class="string">&quot;black&quot;</span>,    <span class="comment">#分组颜色</span></span><br><span class="line">         color = x$color,     <span class="comment">#数据点颜色</span></span><br><span class="line">         pch = <span class="number">19</span>,<span class="comment">#点类型</span></span><br><span class="line">         main = <span class="string">&quot;Gas Mileage for car modes \n grouped by cylinder&quot;</span>,    <span class="comment">#标题</span></span><br><span class="line">         xlab = <span class="string">&quot;miles per gallon&quot;</span>)     <span class="comment">#x轴标签</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="pairsx"><a class="markdownIt-Anchor" href="#pairsx"></a> <code>pairs(x)</code></h3>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 基础用法</span></span><br><span class="line">pairs(iris[<span class="number">1</span>:<span class="number">4</span>], main = <span class="string">&quot;Anderson&#x27;s Iris Data -- 3 species&quot;</span>,</span><br><span class="line">      pch = <span class="number">21</span>, bg = <span class="built_in">c</span>(<span class="string">&quot;red&quot;</span>, <span class="string">&quot;green3&quot;</span>, <span class="string">&quot;blue&quot;</span>)[<span class="built_in">unclass</span>(iris$Species)])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="直方图"><a class="markdownIt-Anchor" href="#直方图"></a> 直方图</h3>
+<p><code>hist(x, ...)</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">par (mfrow = <span class="built_in">c</span>(<span class="number">2</span>,<span class="number">2</span>))  <span class="comment"># 设置四幅图片一起显示</span></span><br><span class="line">hist(mtcars$mpg)  <span class="comment"># 基本直方图</span></span><br><span class="line"></span><br><span class="line">hist(mtcars$mpg,</span><br><span class="line">     breaks = <span class="number">12</span>,  <span class="comment"># 指定组数</span></span><br><span class="line">     col= <span class="string">&quot;red&quot;</span>,  <span class="comment"># 指定颜色</span></span><br><span class="line">     xlab = <span class="string">&quot;Miles per Gallon&quot;</span>,</span><br><span class="line">     main = <span class="string">&quot;colored histogram with 12 bins&quot;</span>)</span><br><span class="line"></span><br><span class="line">hist(mtcars$mpg,</span><br><span class="line">     freq = <span class="literal">FALSE</span>,  <span class="comment"># 表示不按照频数绘图</span></span><br><span class="line">     breaks = <span class="number">12</span>,</span><br><span class="line">     col = <span class="string">&quot;red&quot;</span>,</span><br><span class="line">     xlab = <span class="string">&quot;Miles per Gallon&quot;</span>,</span><br><span class="line">     main = <span class="string">&quot;Histogram,rug plot,density curve&quot;</span>)</span><br><span class="line">rug(jitter(mtcars$mpg))  <span class="comment"># 添加轴须图</span></span><br><span class="line">lines(density(mtcars$mpg),col= <span class="string">&quot;blue&quot;</span>,lwd=<span class="number">2</span>)  <span class="comment">#添加密度曲线</span></span><br><span class="line"></span><br><span class="line">x &lt;-mtcars$mpg</span><br><span class="line">h &lt;-hist(x,breaks = <span class="number">12</span>,</span><br><span class="line">         col = <span class="string">&quot;red&quot;</span>,</span><br><span class="line">         xlab = <span class="string">&quot;Miles per Gallon&quot;</span>,</span><br><span class="line">         main = <span class="string">&quot;Histogram with normal and box&quot;</span>)</span><br><span class="line">xfit &lt;- seq(<span class="built_in">min</span>(x),<span class="built_in">max</span>(x),<span class="built_in">length</span>=<span class="number">40</span>)</span><br><span class="line">yfit &lt;-dnorm(xfit,mean = mean(x),sd=sd(x))</span><br><span class="line">yfit &lt;- yfit *diff(h$mids[<span class="number">1</span>:<span class="number">2</span>])*<span class="built_in">length</span>(x)</span><br><span class="line">lines(xfit,yfit,col=<span class="string">&quot;blue&quot;</span>,lwd=<span class="number">2</span>)  <span class="comment"># 添加正态分布密度曲线</span></span><br><span class="line">box()  <span class="comment"># 添加方框</span></span><br></pre></td></tr></table></figure>
+<h3 id="条形图"><a class="markdownIt-Anchor" href="#条形图"></a> 条形图</h3>
+<p><code>barplot()</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">library(vcd)</span><br><span class="line">counts &lt;- table(Arthritis$Improved)   </span><br><span class="line"><span class="comment">## 引入vcd包只是想要Arthritis中的数据</span></span><br><span class="line">barplot(counts,main = <span class="string">&quot;bar plot&quot;</span>,xlab = <span class="string">&quot;improved&quot;</span>,ylab = <span class="string">&quot;counts&quot;</span>)</span><br><span class="line"></span><br><span class="line">barplot(counts,main = <span class="string">&quot; horizontal bar plot&quot;</span>,</span><br><span class="line">        xlab = <span class="string">&quot;frequency&quot;</span>,</span><br><span class="line">        ylab = <span class="string">&quot;improved&quot;</span>,</span><br><span class="line">        horiz = <span class="literal">TRUE</span>)  </span><br><span class="line"><span class="comment">## horizon值默认是FALSE，为TRUE的时候表示图形变为水平的</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="星图-stars"><a class="markdownIt-Anchor" href="#星图-stars"></a> 星图 <code>stars()</code></h3>
+<p><code>stars(x,full=TRUE,scale=TRUE,key.loc=NULL,draw.segments=FALSE,…)</code></p>
+<p>参数x是矩阵或者是数据框，按照矩阵的行变量进行绘制。对每个标准量单独标准化之后绘制星图。<code>draw.segments=TRUE</code>制定画出弧形</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- <span class="built_in">c</span>(-<span class="number">1.9</span>,-<span class="number">12.7</span>,<span class="number">5.7</span>,<span class="number">6.6</span>,<span class="number">0.3</span>,<span class="number">4.2</span>,<span class="number">15.8</span>,<span class="number">18.5</span>,<span class="number">7.8</span>,<span class="number">10.8</span>,</span><br><span class="line">       -<span class="number">0.9</span>,-<span class="number">8.1</span>,<span class="number">5.6</span>,<span class="number">6.5</span>,<span class="number">3.9</span>,<span class="number">5.81</span>,<span class="number">7.3</span>,<span class="number">20.5</span>,<span class="number">9.0</span>,<span class="number">13.2</span>,</span><br><span class="line">       <span class="number">8.0</span>,<span class="number">0.5</span>,<span class="number">11.1</span>,<span class="number">12.7</span>,<span class="number">11.5</span>,<span class="number">12.8</span>,<span class="number">17.9</span>,<span class="number">21.8</span>,<span class="number">13.3</span>,<span class="number">15.9</span>,</span><br><span class="line">       <span class="number">13.5</span>,<span class="number">8.0</span>,<span class="number">16.6</span>,<span class="number">19.3</span>,<span class="number">17.1</span>,<span class="number">19.0</span>,<span class="number">23.6</span>,<span class="number">26.7</span>,<span class="number">19.2</span>,<span class="number">18.0</span>,</span><br><span class="line">       <span class="number">20.4</span>,<span class="number">18.3</span>,<span class="number">20.8</span>,<span class="number">22.7</span>,<span class="number">21.8</span>,<span class="number">23.9</span>,<span class="number">25.3</span>,<span class="number">28.3</span>,<span class="number">22.9</span>,<span class="number">18.0</span>,</span><br><span class="line">       <span class="number">25.9</span>,<span class="number">21.6</span>,<span class="number">25.6</span>,<span class="number">26.0</span>,<span class="number">27.8</span>,<span class="number">28.4</span>,<span class="number">27.8</span>,<span class="number">29.4</span>,<span class="number">25.4</span>,<span class="number">20.4</span>,</span><br><span class="line">       <span class="number">25.9</span>,<span class="number">24.2</span>,<span class="number">29.4</span>,<span class="number">30.0</span>,<span class="number">27.1</span>,<span class="number">30.2</span>,<span class="number">29.8</span>,<span class="number">30.0</span>,<span class="number">31.0</span>,<span class="number">21.3</span>,</span><br><span class="line">       <span class="number">26.4</span>,<span class="number">24.3</span>,<span class="number">30.2</span>,<span class="number">30.0</span>,<span class="number">26.1</span>,<span class="number">29.7</span>,<span class="number">29.4</span>,<span class="number">28.5</span>,<span class="number">32.4</span>,<span class="number">20.6</span>,</span><br><span class="line">       <span class="number">21.8</span>,<span class="number">17.5</span>,<span class="number">23.9</span>,<span class="number">24.3</span>,<span class="number">21.2</span>,<span class="number">24.0</span>,<span class="number">27.0</span>,<span class="number">27.4</span>,<span class="number">24.8</span>,<span class="number">18.3</span>,</span><br><span class="line">       <span class="number">16.1</span>,<span class="number">11.6</span>,<span class="number">22.1</span>,<span class="number">22.1</span>,<span class="number">19.0</span>,<span class="number">21.0</span>,<span class="number">26.4</span>,<span class="number">27.1</span>,<span class="number">20.6</span>,<span class="number">16.9</span>,</span><br><span class="line">       <span class="number">6.7</span>,<span class="number">0.8</span>,<span class="number">15.7</span>,<span class="number">15.0</span>,<span class="number">10.8</span>,<span class="number">14.0</span>,<span class="number">21.9</span>,<span class="number">25.3</span>,<span class="number">14.6</span>,<span class="number">13.2</span>,</span><br><span class="line">       <span class="number">1.0</span>,<span class="number">6.7</span>,<span class="number">8.2</span>,<span class="number">8.1</span>,<span class="number">3.0</span>,<span class="number">6.8</span>,<span class="number">16.0</span>,<span class="number">20.8</span>,<span class="number">9.4</span>,<span class="number">9.8</span>)</span><br><span class="line">x &lt;- matrix(x, ncol = <span class="number">10</span>, nrow = <span class="number">12</span>, byrow = <span class="built_in">T</span>)</span><br><span class="line">cnames &lt;- <span class="built_in">c</span>(<span class="string">&quot;北京&quot;</span>,<span class="string">&quot;沈阳&quot;</span>,<span class="string">&quot;上海&quot;</span>,<span class="string">&quot;南昌&quot;</span>,<span class="string">&quot;郑州&quot;</span>,<span class="string">&quot;武汉&quot;</span>,<span class="string">&quot;广州&quot;</span>,<span class="string">&quot;海口&quot;</span>,<span class="string">&quot;重庆&quot;</span>,<span class="string">&quot;昆明&quot;</span>)</span><br><span class="line">rnames &lt;- paste0(<span class="number">1</span>:<span class="number">12</span>,<span class="string">&quot;月&quot;</span>,seq=<span class="string">&quot;&quot;</span>)</span><br><span class="line">colnames(x) &lt;-  cnames</span><br><span class="line">rownames(x) &lt;- rnames</span><br><span class="line"></span><br><span class="line">stars(x)</span><br><span class="line">stars(x,key.loc=<span class="built_in">c</span>(<span class="number">10</span>,<span class="number">2</span>,<span class="number">4</span>),cex=<span class="number">0.8</span>)</span><br><span class="line"></span><br><span class="line">stars(t(x),full=<span class="literal">FALSE</span>,draw.segments=<span class="literal">TRUE</span>,key.loc=<span class="built_in">c</span>(<span class="number">10</span>,<span class="number">3</span>,<span class="number">5</span>),cex=<span class="number">0.8</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="绘图选项"><a class="markdownIt-Anchor" href="#绘图选项"></a> 绘图选项</h2>
+<ol>
+<li>
+<p><code>add=FALSE</code> :若为<code>TRUE</code>则叠加一个图形在前一个图上(注意坐标系的位置和尺度可能不一样)</p>
+</li>
+<li>
+<p><code>axes=TRUE</code> :若为<code>FALSE</code>则不绘制轴和边框</p>
+</li>
+<li>
+<p><code>type=&quot;p&quot;</code> :制定图形类型(<code>plot</code>)，“P”：点、“l”：线、“b”：点连线、“o”：点连线，线在点上、“h”：垂直线、“s”：阶梯式，垂直线顶端显示数据、“S”：阶梯式，垂直线低端显示数据</p>
+</li>
+<li>
+<p><code>xlim=</code>,<code>ylim=</code>:指定轴的上下限</p>
+</li>
+<li>
+<p><code>xlab=</code>,<code>ylab=</code>:坐标轴标签，必须为字符型值</p>
+</li>
+<li>
+<p><code>main=</code>:主标题，字符型值</p>
+</li>
+<li>
+<p><code>sub</code>: 副标题(小字体)</p>
+</li>
+</ol>
+
+  
+
+
+  </article>
+  
+<br>
+
+  
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a><a href="/wiki/tags/%E8%A1%A5%E5%85%85%E7%AC%94%E8%AE%B0/">补充笔记</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/about/#comments">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/hermitlsr">GitHub</a><a target="_blank" rel="noopener" href="https://volantis.hermitlsr.top">分站</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<p>本站由 <a href="https://www.hermitlsr.top/">@hermitlee</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.1" title="v1.5.1">Stellar</a> 作为主题。</p>
+<p>本站托管于 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>，<a target="_blank" rel="noopener" href="https://github.com/">Github Page</a> ，使用 <a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral">又拍云</a> 作为图床。</p>
+<p>备案信息：渝ICP备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">2021006569</a>号，公安备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">50011702500564</a>号，萌ICP备<a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20201324">20201324</a>号</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.1';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur","loadingImg":"https://cdn.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/lazyload_saber3.gif"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper/swiper-bundle.min.css","js":"https://unpkg.com/swiper/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadBeaudar() {
+    const els = document.querySelectorAll("#comments #beaudar");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://beaudar.lipk.org/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+      loadBeaudar();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="https://myhkw.cn/api/player/163072767496" id="myhk" key="163072767496" m="1"></script>
+</body>
+</html>

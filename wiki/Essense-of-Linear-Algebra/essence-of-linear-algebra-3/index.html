@@ -1,0 +1,383 @@
+<!--
+
+██╗  ██╗███████╗██████╗ ███╗   ███╗██╗████████╗██╗     ███████╗███████╗
+██║  ██║██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██║     ██╔════╝██╔════╝
+███████║█████╗  ██████╔╝██╔████╔██║██║   ██║   ██║     █████╗  █████╗
+██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║   ██║     ██╔══╝  ██╔══╝
+██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║   ██║   ███████╗███████╗███████╗
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝
+
+* ░░░░░░░░░░░░░░░░░░░░░░░░▄░░
+* ░░░░░░░░░▐█░░░░░░░░░░░▄▀▒▌░
+* ░░░░░░░░▐▀▒█░░░░░░░░▄▀▒▒▒▐
+* ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+* ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+* ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
+* ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒
+* ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+* ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄
+* ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒
+* ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒
+
+　　              《蒹葭》
+
+          先秦· 《诗经·国风·秦风》
+
+　　蒹葭苍苍，白露为霜。所谓伊人，在水一方。
+
+　　溯洄从之，道阻且长。溯游从之，宛在水中央。
+
+　　蒹葭萋萋，白露未晞。所谓伊人，在水之湄。
+
+　　溯洄从之，道阻且跻。溯游从之，宛在水中坻。
+
+　　蒹葭采采，白露未已。所谓伊人，在水之涘。
+
+　　溯洄从之，道阻且右。溯游从之，宛在水中沚。
+
+
+我现在有两件事，一件事是考研，另一件事也是考研。
+
+#######################################################
+即得易见平凡，仿照上例显然。留作习题答案略，读者自证不难。
+反之亦然同理，推论自然成立，略去过程 Q E D，由上可知证毕。
+-->
+
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?190ce95d54ce32d0d767e1d96e3e1ad7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<head>
+  <!-- 谷歌站点验证 -->
+  <meta name="google-site-verification" content="jyK8ig65NSyIhRJGkI_mRSDH46ZbLic9TZBLlaXY7II" />
+  <!-- 百度站点验证 -->
+  <meta name="baidu-site-verification" content="code-AAFd9gcXEW" />
+  <!-- 百度主动推送 -->
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <meta name="generator" content="Hexo 5.4.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>Essense-of-Linear-Algebra：3. 矩阵与线性变换 - HERMITLEE</title>
+
+  
+    <meta name="description" content="视频 “Unfortunately，no one can be told what the Matrix is. You have to see it for yourself. – Morpheus”“很遗憾，矩阵是什么是说不清的。你必须自己亲眼看看 ——墨菲斯”     随手记 “变换”本质上是“函数”的一种花哨的说法，他接受输入内容，并输出对应结果。 “线性变换”限制了是“线性”的，变换后">
+<meta property="og:type" content="website">
+<meta property="og:title" content="3. 矩阵与线性变换">
+<meta property="og:url" content="https://www.hermitlsr.top/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-3/">
+<meta property="og:site_name" content="HERMITLEE">
+<meta property="og:description" content="视频 “Unfortunately，no one can be told what the Matrix is. You have to see it for yourself. – Morpheus”“很遗憾，矩阵是什么是说不清的。你必须自己亲眼看看 ——墨菲斯”     随手记 “变换”本质上是“函数”的一种花哨的说法，他接受输入内容，并输出对应结果。 “线性变换”限制了是“线性”的，变换后">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-29T12:00:03.026Z">
+<meta property="article:modified_time" content="2021-08-29T12:00:03.026Z">
+<meta property="article:author" content="hermitlee">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="HERMITLEE" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/rick32.png">
+  
+
+  
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='wiki'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki/"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/Essense-of-Linear-Algebra/"><div class="main">线性代数的本质</div><div class="sub cap">线性代数空间上的表现</div></a></div>
+</header>
+
+<div class="widgets">
+
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">视频笔记</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/"><span class="toc-text">0. 前言</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-1/"><span class="toc-text">1. 向量究竟是什么？</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-2/"><span class="toc-text">2. 线性组合、张成的空间与基</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-3/"><span class="toc-text">3. 矩阵与线性变换</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E9%A2%91"><span class="toc-text"> 视频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%89%8B%E8%AE%B0"><span class="toc-text"> 随手记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%AE%9A%E4%B9%89"><span class="toc-text"> 标准定义</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-4/"><span class="toc-text">4. 矩阵乘法与线性变换复合</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-5/"><span class="toc-text">5. 三维空间中的线性变换</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-6/"><span class="toc-text">6. 行列式</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-7/"><span class="toc-text">7. 逆矩阵、列空间与零空间</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-8/"><span class="toc-text">8. 非方阵</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-9/"><span class="toc-text">9.点积与对偶性</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-10/"><span class="toc-text">10.叉积的标准介绍</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-11/"><span class="toc-text">11.以线性变换的眼光看叉积</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-12/"><span class="toc-text">12.基变换</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-13/"><span class="toc-text">13.特征向量与特征值</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-14/"><span class="toc-text">14.计算二阶矩阵特征值的妙计</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-15/"><span class="toc-text">15.抽象向量空间</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-16/"><span class="toc-text">16.克莱默法则</span></a></div></div></div>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+  
+  
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">HERMITLEE</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/Essense-of-Linear-Algebra/">线性代数的本质</a></div><div id="post-meta">更新于&nbsp;<time datetime="2021-08-29T12:00:03.026Z">2021年8月29日</time></div></div>
+
+  <article class='content md wiki'>
+  <h1 class="article-title"><span>3. 矩阵与线性变换</span></h1>
+  <h2 id="视频"><a class="markdownIt-Anchor" href="#视频"></a> 视频</h2>
+<div class="tag-plugin note" color="red"><div class="body"><p>“Unfortunately，no one can be told what the Matrix is. You have to see it for yourself. – Morpheus”<br />“很遗憾，矩阵是什么是说不清的。你必须自己亲眼看看 ——墨菲斯”</p></div></div>
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=6043439&bvid=BV1ns41167b9&cid=9809358&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no" allowfullscreen="true"></iframe>
+</div>
+<h2 id="随手记"><a class="markdownIt-Anchor" href="#随手记"></a> 随手记</h2>
+<p>“变换”本质上是“函数”的一种花哨的说法，他接受输入内容，并输出对应结果。</p>
+<p>“线性变换”限制了是“线性”的，变换后，直线仍然是直线，原点保持固定。总的来说可以看作是<u>“保持网格线平行并等距分布”</u>的变换。</p>
+<p>通过记录基向量的变换来确定其他向量的变换。</p>
+<p>通过矩阵记录基的变换，若要得到变换后的坐标，只需将原向量左乘变换矩阵即可。</p>
+<p>矩阵记录了线性变换。若矩阵的列线性相关，以 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2×2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 矩阵为例，该矩阵所进行的线性变换将整个二维空间挤压到他们所在一条直线上，也就是这两个向量张成的一维空间。</p>
+<p>每当看到一个矩阵时都可以将其解读为对<u>空间的一种特定变换</u>。</p>
+<h2 id="标准定义"><a class="markdownIt-Anchor" href="#标准定义"></a> 标准定义</h2>
+<div class="tag-plugin note" color="blue"><div class="body"><p>上面所说的矩阵严格来说应该称为<u>过度矩阵 u</u></p></div></div>
+<div class="tag-plugin note" color="blue"><div class="title"><strong>线性映射</strong></div><div class="body"><p>设 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi></mrow><annotation encoding="application/x-tex">\varphi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">φ</span></span></span></span> 是数域 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="double-struck">K</mi></mrow><annotation encoding="application/x-tex">\mathbb{K}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord"><span class="mord mathbb">K</span></span></span></span></span> 上线性空间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span> 上线性空间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span></span></span></span> 的映射，如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi></mrow><annotation encoding="application/x-tex">\varphi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">φ</span></span></span></span> 适合下列条件：<br />（1）<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi><mo stretchy="false">(</mo><mi>α</mi><mo>+</mo><mi>β</mi><mo stretchy="false">)</mo><mo>=</mo><mi>φ</mi><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo><mo>+</mo><mi>φ</mi><mo stretchy="false">(</mo><mi>β</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>α</mi><mo separator="true">,</mo><mi>β</mi><mo>∈</mo><mi>V</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">\varphi(\alpha + \beta) = \varphi(\alpha) + \varphi(\beta), \alpha,\beta \in V;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">φ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">φ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">φ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mpunct">;</span></span></span></span><br />（2）<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi><mo stretchy="false">(</mo><mi>k</mi><mi>α</mi><mo stretchy="false">)</mo><mo>=</mo><mi>k</mi><mi>φ</mi><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">k</mi><mo separator="true">,</mo><mi>α</mi><mo>∈</mo><mi>V</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\varphi(k\alpha) = k\varphi(\alpha), k\in \mathbb{k}, \alpha \in V,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">φ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">φ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.88333em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathbb">k</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span></span></span></span><br />则称 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi></mrow><annotation encoding="application/x-tex">\varphi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">φ</span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>→</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">V \rightarrow U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span></span></span></span> 的线性映射。 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span> 到自身的线性映射称为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span> 上的线性变换。</p></div></div>
+
+  
+
+
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-4/">4. 矩阵乘法与线性变换复合<span class="note">下一篇</span></a><div class="line"></div><a id="prev" href="/wiki/Essense-of-Linear-Algebra/essence-of-linear-algebra-2/">2. 线性组合、张成的空间与基<span class="note">上一篇</span></a></section></div>
+
+  
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a><a href="/wiki/tags/%E8%A1%A5%E5%85%85%E7%AC%94%E8%AE%B0/">补充笔记</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/about/#comments">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/hermitlsr">GitHub</a><a target="_blank" rel="noopener" href="https://volantis.hermitlsr.top">分站</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<p>本站由 <a href="https://www.hermitlsr.top/">@hermitlee</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.1" title="v1.5.1">Stellar</a> 作为主题。</p>
+<p>本站托管于 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>，<a target="_blank" rel="noopener" href="https://github.com/">Github Page</a> ，使用 <a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral">又拍云</a> 作为图床。</p>
+<p>备案信息：渝ICP备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">2021006569</a>号，公安备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">50011702500564</a>号，萌ICP备<a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20201324">20201324</a>号</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.1';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur","loadingImg":"https://cdn.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/lazyload_saber3.gif"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper/swiper-bundle.min.css","js":"https://unpkg.com/swiper/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadBeaudar() {
+    const els = document.querySelectorAll("#comments #beaudar");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://beaudar.lipk.org/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+      loadBeaudar();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="https://myhkw.cn/api/player/163072767496" id="myhk" key="163072767496" m="1"></script>
+</body>
+</html>

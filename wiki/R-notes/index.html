@@ -1,0 +1,460 @@
+<!--
+
+██╗  ██╗███████╗██████╗ ███╗   ███╗██╗████████╗██╗     ███████╗███████╗
+██║  ██║██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██║     ██╔════╝██╔════╝
+███████║█████╗  ██████╔╝██╔████╔██║██║   ██║   ██║     █████╗  █████╗
+██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║   ██║     ██╔══╝  ██╔══╝
+██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║   ██║   ███████╗███████╗███████╗
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝
+
+* ░░░░░░░░░░░░░░░░░░░░░░░░▄░░
+* ░░░░░░░░░▐█░░░░░░░░░░░▄▀▒▌░
+* ░░░░░░░░▐▀▒█░░░░░░░░▄▀▒▒▒▐
+* ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+* ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+* ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
+* ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒
+* ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+* ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄
+* ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒
+* ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒
+
+　　              《蒹葭》
+
+          先秦· 《诗经·国风·秦风》
+
+　　蒹葭苍苍，白露为霜。所谓伊人，在水一方。
+
+　　溯洄从之，道阻且长。溯游从之，宛在水中央。
+
+　　蒹葭萋萋，白露未晞。所谓伊人，在水之湄。
+
+　　溯洄从之，道阻且跻。溯游从之，宛在水中坻。
+
+　　蒹葭采采，白露未已。所谓伊人，在水之涘。
+
+　　溯洄从之，道阻且右。溯游从之，宛在水中沚。
+
+
+我现在有两件事，一件事是考研，另一件事也是考研。
+
+#######################################################
+即得易见平凡，仿照上例显然。留作习题答案略，读者自证不难。
+反之亦然同理，推论自然成立，略去过程 Q E D，由上可知证毕。
+-->
+
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?190ce95d54ce32d0d767e1d96e3e1ad7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<head>
+  <!-- 谷歌站点验证 -->
+  <meta name="google-site-verification" content="jyK8ig65NSyIhRJGkI_mRSDH46ZbLic9TZBLlaXY7II" />
+  <!-- 百度站点验证 -->
+  <meta name="baidu-site-verification" content="code-AAFd9gcXEW" />
+  <!-- 百度主动推送 -->
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <meta name="generator" content="Hexo 5.4.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>R-notes：数据结构 - HERMITLEE</title>
+
+  
+    <meta name="description" content="所有R语言对象都有两个内在属性，类型和长度。类型是对象元素的基本种类，共有四种：   数值型——整型、单精度实型、双精度实型   字符型   复数型   逻辑型(FALSE、TRUE或NA)   常用mode()、class()、length得到类型和长度 注：mode：表示对象在内存中的存储类型 基本数据类型’atomic’ mode： numeric（Integer&#x2F;double）, comp">
+<meta property="og:type" content="website">
+<meta property="og:title" content="数据结构">
+<meta property="og:url" content="https://www.hermitlsr.top/wiki/R-notes/">
+<meta property="og:site_name" content="HERMITLEE">
+<meta property="og:description" content="所有R语言对象都有两个内在属性，类型和长度。类型是对象元素的基本种类，共有四种：   数值型——整型、单精度实型、双精度实型   字符型   复数型   逻辑型(FALSE、TRUE或NA)   常用mode()、class()、length得到类型和长度 注：mode：表示对象在内存中的存储类型 基本数据类型’atomic’ mode： numeric（Integer&#x2F;double）, comp">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-29T12:00:03.032Z">
+<meta property="article:modified_time" content="2021-08-29T12:00:03.032Z">
+<meta property="article:author" content="hermitlee">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="HERMITLEE" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/rick32.png">
+  
+
+  
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='wiki'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki/"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/R-notes/"><div class="main">R语言笔记</div><div class="sub cap">从初等到进阶</div></a></div>
+</header>
+
+<div class="widgets">
+
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">课程笔记</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/R-notes/"><span class="toc-text">数据结构</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-text"> 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="toc-text"> 浏览对象的信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F"><span class="toc-text"> 向量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6"><span class="toc-text"> 字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%A0%E5%AD%90"><span class="toc-text"> 因子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%92%8C%E7%9F%A9%E9%98%B5"><span class="toc-text"> 数组和矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A1%86"><span class="toc-text"> 数据框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-text"> 列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97"><span class="toc-text"> 时间序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%87%BD%E6%95%B0"><span class="toc-text"> 常用的统计函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E6%8A%80%E5%B7%A7"><span class="toc-text"> 一个技巧</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/R-notes/probability-distribution/"><span class="toc-text">概率分布</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/R-notes/parameter-estimation/"><span class="toc-text">参数估计</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/R-notes/graphics-function/"><span class="toc-text">图形功能</span></a></div></div></div>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+  
+  
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">HERMITLEE</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/R-notes/">R语言笔记</a></div><div id="post-meta">更新于&nbsp;<time datetime="2021-08-29T12:00:03.032Z">2021年8月29日</time></div></div>
+
+  <article class='content md wiki'>
+  <h1 class="article-title"><span>数据结构</span></h1>
+  <p>所有R语言对象都有两个内在属性，类型和长度。类型是对象元素的基本种类，共有四种：</p>
+<ol>
+<li>
+<p>数值型——整型、单精度实型、双精度实型</p>
+</li>
+<li>
+<p>字符型</p>
+</li>
+<li>
+<p>复数型</p>
+</li>
+<li>
+<p>逻辑型(FALSE、TRUE或NA)</p>
+</li>
+</ol>
+<p>常用<code>mode()</code>、<code>class()</code>、<code>length</code>得到类型和长度</p>
+<p>注：mode：表示对象在内存中的存储类型</p>
+<p>基本数据类型’atomic’ mode：</p>
+<p>numeric（Integer/double）, complex, character和logical</p>
+<p>递归的对象（recursive object）：</p>
+<p>‘list’ 或 ‘function’</p>
+<p>class：是一种抽象类型，或者理解为一种数据结构</p>
+<p>他主要是用来给泛型函数（参考java中泛型的概念）识别参数用。</p>
+<h2 id="对象"><a class="markdownIt-Anchor" href="#对象"></a> 对象</h2>
+<p>对象有7种：向量、因子、数组、矩阵(特殊的数组)、数据框、时间序列(ts)、列表</p>
+<p>基本运算中：<code>xor()</code>异或函数：a⊕b = (¬a ∧ b) ∨ (a ∧¬b) 逻辑运算</p>
+<h3 id="浏览对象的信息"><a class="markdownIt-Anchor" href="#浏览对象的信息"></a> 浏览对象的信息</h3>
+<p><code>ls()</code>返回环境中的对象名称，参数<code>pattern</code>指定含有某个字母，<code>^</code>指定首字母：<code>ls(pat=&quot;^m&quot;)</code></p>
+<p><code>ls.str()</code> 显示内存中所有对象的详细情况，<code>max.level=-1</code>避免结果过长</p>
+<h3 id="向量"><a class="markdownIt-Anchor" href="#向量"></a> 向量</h3>
+<p><code>seq(from = , to = , by = ((to - from)/(length.out - 1)),length.out = NULL)</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">seq(from = <span class="number">2</span>, to = <span class="number">5</span>, by = <span class="number">0.5</span>)</span><br><span class="line">seq(from = <span class="number">2</span>, to = <span class="number">5</span>, length.out = <span class="number">7</span>)</span><br></pre></td></tr></table></figure>
+<p><code>rep(x, times = 1, length.out = NA, each = 1)</code></p>
+<p><code>times</code> x重复的次数；<code>each</code> x中每一个元素重复的次数</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rep</span>(<span class="number">2</span>:<span class="number">5</span>, times = <span class="number">2</span>)</span><br><span class="line"><span class="built_in">rep</span>(<span class="number">2</span>:<span class="number">5</span>, each = <span class="number">2</span>)</span><br><span class="line"><span class="built_in">rep</span>(<span class="number">2</span>:<span class="number">5</span>, times = <span class="number">2</span>, each = <span class="number">2</span>)</span><br><span class="line"><span class="built_in">rep</span>(<span class="number">2</span>:<span class="number">5</span>, <span class="built_in">c</span>(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>))  <span class="comment"># 2:5 中的每个元素按c(2,3,4,5)重复 </span></span><br></pre></td></tr></table></figure>
+<p><code>sequence()</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sequence(<span class="number">5</span>:<span class="number">10</span>)</span><br><span class="line">sequence(<span class="number">10</span>:<span class="number">5</span>)</span><br><span class="line">sequence(<span class="built_in">c</span>(<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="字符"><a class="markdownIt-Anchor" href="#字符"></a> 字符</h3>
+<p><code>paste (..., sep = &quot; &quot;, collapse = NULL)</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">paste(<span class="built_in">c</span>(<span class="string">&quot;X&quot;</span>, <span class="string">&quot;Y&quot;</span>), <span class="number">1</span>:<span class="number">10</span>, sep = <span class="string">&quot;&quot;</span>)</span><br><span class="line">paste(<span class="built_in">c</span>(<span class="string">&quot;X&quot;</span>, <span class="string">&quot;Y&quot;</span>, <span class="string">&quot;Z&quot;</span>), <span class="number">1</span>:<span class="number">5</span>, sep = <span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="因子"><a class="markdownIt-Anchor" href="#因子"></a> 因子</h3>
+<p><code>factor(x = character(), levels, labels = levels, ordered = is.ordered(x) )</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">factor(x = <span class="built_in">LETTERS</span>[<span class="number">1</span>:<span class="number">3</span>], levels = <span class="built_in">c</span>(<span class="string">&quot;C&quot;</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>))</span><br><span class="line">factor(x = <span class="built_in">LETTERS</span>[<span class="number">1</span>:<span class="number">3</span>], labels = <span class="number">1</span>:<span class="number">3</span>)</span><br><span class="line">factor(x = <span class="built_in">LETTERS</span>[<span class="number">1</span>:<span class="number">3</span>], labels = <span class="built_in">c</span>(<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>))</span><br><span class="line">factor(x = <span class="built_in">LETTERS</span>[<span class="number">1</span>:<span class="number">3</span>], </span><br><span class="line">levels = <span class="built_in">c</span>(<span class="string">&quot;C&quot;</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>), labels  = <span class="built_in">c</span>(<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<p><code>gl(n, k, length = n*k, labels = seq_len(n), ordered = FALSE)</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gl(<span class="number">2</span>, <span class="number">3</span>, labels = seq(<span class="number">2</span>))</span><br><span class="line">gl(<span class="number">2</span>, <span class="number">3</span>, <span class="built_in">length</span> = <span class="number">10</span>, labels = seq(<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="数组和矩阵"><a class="markdownIt-Anchor" href="#数组和矩阵"></a> 数组和矩阵</h3>
+<ol>
+<li><code>array(data, dim, dimnames)</code></li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Create two vectors of different lengths.</span></span><br><span class="line">vector1 &lt;- <span class="built_in">c</span>(<span class="number">5</span>,<span class="number">9</span>,<span class="number">3</span>)</span><br><span class="line">vector2 &lt;- <span class="built_in">c</span>(<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>)</span><br><span class="line">column.names &lt;- <span class="built_in">c</span>(<span class="string">&quot;COL1&quot;</span>,<span class="string">&quot;COL2&quot;</span>,<span class="string">&quot;COL3&quot;</span>)</span><br><span class="line">column.names &lt;- paste0(<span class="string">&quot;COL&quot;</span>, seq(<span class="number">3</span>))</span><br><span class="line">row.names &lt;- <span class="built_in">c</span>(<span class="string">&quot;ROW1&quot;</span>,<span class="string">&quot;ROW2&quot;</span>,<span class="string">&quot;ROW3&quot;</span>)</span><br><span class="line">matrix.names &lt;- <span class="built_in">c</span>(<span class="string">&quot;Matrix1&quot;</span>,<span class="string">&quot;Matrix2&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Take these vectors as input to the array.</span></span><br><span class="line">result &lt;- array(<span class="built_in">c</span>(vector1,vector2),<span class="built_in">dim</span> = <span class="built_in">c</span>(<span class="number">3</span>,<span class="number">3</span>,<span class="number">2</span>),<span class="built_in">dimnames</span> = <span class="built_in">list</span>(row.names,</span><br><span class="line">   column.names, matrix.names))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Print the third row of the second matrix of the array.</span></span><br><span class="line">print(result[<span class="number">3</span>,,<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Print the element in the 1st row and 3rd column of the 1st matrix.</span></span><br><span class="line">print(result[<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Print the 2nd Matrix.</span></span><br><span class="line">print(result[,,<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>对矩阵运算 <code>apply()</code>、<code>sweep</code>函数</li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">A &lt;- matrix(seq(<span class="number">9</span>), ncol=<span class="number">3</span>)</span><br><span class="line">B &lt;- matrix(<span class="number">4</span>:<span class="number">15</span>, ncol=<span class="number">3</span>)</span><br><span class="line">C &lt;- matrix(<span class="built_in">rep</span>(<span class="built_in">c</span>(<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>),<span class="number">2</span>), ncol=<span class="number">2</span>)</span><br><span class="line"><span class="comment"># Create a list of matrices</span></span><br><span class="line">MyList &lt;- <span class="built_in">list</span>(A,B,C)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Extract the 2nd column from `MyList` with the selection operator `[` with `lapply()`</span></span><br><span class="line">lapply(MyList,<span class="string">&quot;[&quot;</span>, , <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Extract the 1st row from `MyList`</span></span><br><span class="line">lapply(MyList,<span class="string">&quot;[&quot;</span>, <span class="number">1</span>, )</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>数据切片<code>sweep</code></li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># NOT RUN &#123;</span></span><br><span class="line">require(stats) <span class="comment"># for median</span></span><br><span class="line">med.att &lt;- apply(attitude, <span class="number">2</span>, median)</span><br><span class="line">sweep(data.matrix(attitude), <span class="number">2</span>, med.att)  <span class="comment"># subtract the column medians</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## More sweeping:</span></span><br><span class="line">A &lt;- array(<span class="number">1</span>:<span class="number">24</span>, <span class="built_in">dim</span> = <span class="number">4</span>:<span class="number">2</span>)</span><br><span class="line"><span class="comment">## no warnings in normal use</span></span><br><span class="line">sweep(A, <span class="number">1</span>, <span class="number">5</span>);sweep(A, <span class="number">2</span>, <span class="number">5</span>)</span><br><span class="line">(A.min &lt;- apply(A, <span class="number">1</span>, <span class="built_in">min</span>))  <span class="comment"># == 1:4</span></span><br><span class="line">sweep(A, <span class="number">1</span>, A.min)</span><br><span class="line">sweep(A, <span class="number">1</span>:<span class="number">2</span>, apply(A, <span class="number">1</span>:<span class="number">2</span>, median))</span><br><span class="line"></span><br><span class="line"><span class="comment">## warnings when mismatch</span></span><br><span class="line">sweep(A, <span class="number">1</span>, <span class="number">1</span>:<span class="number">3</span>)  <span class="comment"># STATS does not recycle</span></span><br><span class="line">sweep(A, <span class="number">1</span>, <span class="number">6</span>:<span class="number">1</span>)  <span class="comment"># STATS is longer</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## exact recycling:</span></span><br><span class="line">sweep(A, <span class="number">1</span>, <span class="number">1</span>:<span class="number">2</span>)  <span class="comment"># no warning</span></span><br><span class="line">sweep(A, <span class="number">1</span>, as.array(<span class="number">1</span>:<span class="number">2</span>))  <span class="comment"># warning</span></span><br><span class="line"><span class="comment"># &#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="数据框"><a class="markdownIt-Anchor" href="#数据框"></a> 数据框</h3>
+<p><code>data.fram()</code><br />
+注意函数<code>rownames()</code>、<code>colnames()</code>、<code>attach()</code>、<code>with</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">attach(Puromycin)</span><br><span class="line">xtabs(~state + conc, data = Puromycin)</span><br><span class="line">summary(Puromycin)</span><br><span class="line">pairs(Puromycin, panel = panel.smooth)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="列表"><a class="markdownIt-Anchor" href="#列表"></a> 列表</h3>
+<p>略</p>
+<h3 id="时间序列"><a class="markdownIt-Anchor" href="#时间序列"></a> 时间序列</h3>
+<p><code>ts(data = NA, start = 1, end = numeric(), frequency = 1,deltat = 1, ts.eps = getOption(&quot;ts.eps&quot;), class = , names = )</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">A &lt;- ts(<span class="number">1</span>:<span class="number">10</span>, start = <span class="number">1959</span>)</span><br><span class="line">ts(<span class="number">1</span>:<span class="number">47</span>, frequency = <span class="number">12</span>, start = <span class="built_in">c</span>(<span class="number">1959</span>, <span class="number">2</span>))</span><br><span class="line">ts(<span class="number">1</span>:<span class="number">47</span>, frequency = <span class="number">4</span>, start = <span class="built_in">c</span>(<span class="number">1959</span>, <span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">ts(matrix(rpois(<span class="number">36</span>, <span class="number">5</span>), <span class="number">12</span>, <span class="number">3</span>), start = <span class="built_in">c</span>(<span class="number">1961</span>,<span class="number">1</span>),frequency = <span class="number">12</span>)</span><br><span class="line">ts(matrix(rpois(<span class="number">36</span>, <span class="number">5</span>)), start = <span class="built_in">c</span>(<span class="number">1961</span>,<span class="number">1</span>),frequency = <span class="number">12</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="常用的统计函数"><a class="markdownIt-Anchor" href="#常用的统计函数"></a> 常用的统计函数</h3>
+<ol>
+<li><code>mad()</code> 中位绝对离差</li>
+</ol>
+<p><code>MAD=median(∣Xi−median(X)∣)</code> 鲁棒性</p>
+<p>具体可参见：<a target="_blank" rel="noopener" href="https://blog.csdn.net/horses/article/details/78749485">https://blog.csdn.net/horses/article/details/78749485</a></p>
+<ol start="2">
+<li>中位数、方差、标准差、范围、四分位数极差、分位数</li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- seq(<span class="number">10</span>)</span><br><span class="line">sd(x)</span><br><span class="line">var(x)</span><br><span class="line">sd(x)</span><br><span class="line"><span class="built_in">range</span>(x)</span><br><span class="line">IQR(x)</span><br><span class="line">quantile(x)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>累乘、累和（结果）</li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- seq(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">prod</span>(x)</span><br><span class="line"><span class="built_in">sum</span>(x)</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>累和、累积、累小、累大（每一个）</li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- seq(<span class="number">5</span>)</span><br><span class="line">y &lt;- <span class="built_in">c</span>(<span class="number">3</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">7</span>)</span><br><span class="line"><span class="built_in">cumsum</span>(x)</span><br><span class="line"><span class="built_in">cumprod</span>(x)</span><br><span class="line"><span class="built_in">cummax</span>(y)</span><br><span class="line"><span class="built_in">cummin</span>(y)</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>排序 <code>rev()</code>、<code>sort()</code>、<code>order()</code>、<code>rank()</code></li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(x &lt;- sample(seq(<span class="number">20</span>),<span class="number">5</span>,replace = <span class="built_in">F</span>))</span><br><span class="line">rev(x)  <span class="comment"># 逆序</span></span><br><span class="line">sort(x)  <span class="comment"># 按从小到大顺序</span></span><br><span class="line">rank(x)  <span class="comment"># 排序后的顺序</span></span><br><span class="line">order(x) <span class="comment"># 排序后所放元素在之前的位置</span></span><br><span class="line"></span><br><span class="line">x[order(x)]</span><br><span class="line">sort(x)[rank(x)]</span><br></pre></td></tr></table></figure>
+<h2 id="一个技巧"><a class="markdownIt-Anchor" href="#一个技巧"></a> 一个技巧</h2>
+<p>这是一个乱入的技巧，记得使用R语言做机器学习的时候用到的。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">?<span class="built_in">substitute</span></span><br><span class="line">deparse(<span class="built_in">substitute</span>(series))</span><br><span class="line">?deparse  <span class="comment">#将表达式转换为字符串</span></span><br></pre></td></tr></table></figure>
+
+  
+
+
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/wiki/R-notes/probability-distribution/">概率分布<span class="note">下一篇</span></a><div class="line"></div></section></div>
+
+  
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a><a href="/wiki/tags/%E8%A1%A5%E5%85%85%E7%AC%94%E8%AE%B0/">补充笔记</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/about/#comments">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/hermitlsr">GitHub</a><a target="_blank" rel="noopener" href="https://volantis.hermitlsr.top">分站</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<p>本站由 <a href="https://www.hermitlsr.top/">@hermitlee</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.1" title="v1.5.1">Stellar</a> 作为主题。</p>
+<p>本站托管于 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>，<a target="_blank" rel="noopener" href="https://github.com/">Github Page</a> ，使用 <a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral">又拍云</a> 作为图床。</p>
+<p>备案信息：渝ICP备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">2021006569</a>号，公安备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">50011702500564</a>号，萌ICP备<a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20201324">20201324</a>号</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.1';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur","loadingImg":"https://cdn.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/lazyload_saber3.gif"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper/swiper-bundle.min.css","js":"https://unpkg.com/swiper/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadBeaudar() {
+    const els = document.querySelectorAll("#comments #beaudar");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://beaudar.lipk.org/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+      loadBeaudar();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="https://myhkw.cn/api/player/163072767496" id="myhk" key="163072767496" m="1"></script>
+</body>
+</html>
