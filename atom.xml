@@ -6,7 +6,7 @@
   <link href="https://www.hermitlsr.top/atom.xml" rel="self"/>
   
   <link href="https://www.hermitlsr.top/"/>
-  <updated>2021-09-30T18:00:00.000Z</updated>
+  <updated>2022-01-12T08:00:00.000Z</updated>
   <id>https://www.hermitlsr.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重启博客，重启时光</title>
+    <link href="https://www.hermitlsr.top/2022-01-12/%E9%87%8D%E5%90%AF%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://www.hermitlsr.top/2022-01-12/%E9%87%8D%E5%90%AF%E5%8D%9A%E5%AE%A2/</id>
+    <published>2022-01-12T08:00:00.000Z</published>
+    <updated>2022-01-12T08:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>搁着半年多，继续写博客。</p><span id="more"></span><p>  博客被搁着了差不多半年吧。这半年多也发生了不少事情，让我没有精力，也找不到太多想写的东西，于是就搁置了。</p><p>  事实上，半年前，也没有产出多少高质量的博客，主要是一些建站的记录。但不得不说，这些记录让我迁移博客数据，重新部署的过程十分顺畅。毕竟不再需要去搜索各种资料，去搞清楚怎么用 <code>github action</code> 了。</p><p>  之后的博客内容应该是分为四个部分：<br />   1. 首页上的 <code>blog</code> 内容，应该是日常的一些记录，和一些单独不成系统的技术博客和笔记博客；<br />   2. 项目页的 <code>wiki</code> 内容，应该是整理好的一些项目记录，和经过归纳整理的笔记专题；<br />   3. <a href="https://notestree.hermitlsr.top/">笔记分站</a> ，一些日常笔记，多为学习时直接记录的内容和疑惑。<br />   4. 便笺页的 <code>note</code> 内容，一些简短的，杂乱的技巧。<br />无奈，水平有限，主要还是以个人学习记录为主。</p><p>  题外话说一下 <code>hexo-theme-tree</code> 这个主题，是我用在笔记分站的主题，十分简洁，拿来放笔记再合适不过了，我个人移植了标签，然后加上一些标签插件基本上是完全够用的。</p><p>  下面谈谈，这半年发生了什么，大概就是重回单身，考研失利，失去亲人，咳疾继续。</p><p>  第一个是感情问题，就不多扯淡了，没什么意思。第二个就是二战失利，准确来说是自己昼夜颠倒，沉迷刷剧，无心学习，然后理所当然的看到题目不知所措，最后不出意外的话继续名落孙山，送自己一句话，该。第三个是，自己的二爸，也就是老爹的哥哥旧疾复发去世了，在所有这些亲戚中，我印象中对我最好的就是他们家了，所以应该是伤心的。最后就是自高二以来每年必有的咳疾又发生了，和去年一样都是在考研的时候，不一样的是，去年被隔离了，大晚上被装进医院一宿没睡，今年没被隔离，然后到现在还在咳咳咳。坦率来讲，这半年其实过得挺糟糕的。后面不出意外的话应该是找个工作，然后继续准备考研。争取这一年把要看的书都看完，到时候应该会产出不少笔记。</p><p>  这大半年最后悔的事情应该是没怎么好好看书了，准确来说之前大学期间最后回到事情也是没好好看书，无论是那些数分高代，概率论随机过程，还是一些史书名著，都没怎么好好看，搞得现在脑子一团浆糊。突然想起来以前高考前一两个月抱着红楼梦囫囵吞枣看完的事情，当时也是心大，不过挺开心的。</p><p>  扯了一些有的没的，也没啥主题，主要就是说，后面应该继续写博客了。</p><p><img src="https://doc.hermitlsr.top/post/line.gif" alt="" /></p><iframe src="/donate/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;搁着半年多，继续写博客。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="生活纪事" scheme="https://www.hermitlsr.top/blog/categories/%E7%94%9F%E6%B4%BB%E7%BA%AA%E4%BA%8B/"/>
+    
+    
+    <category term="杂叙" scheme="https://www.hermitlsr.top/blog/tags/%E6%9D%82%E5%8F%99/"/>
+    
+  </entry>
   
   <entry>
     <title>档案风波2</title>
