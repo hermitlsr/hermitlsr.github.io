@@ -2320,27 +2320,29 @@ details.folding[child=codeblock]>div.body .highlight .code:before {
 }
 .md .tag-plugin.quot {
   text-align: center;
-  font-weight: 700;
   position: relative;
+  align-items: center;
+}
+.md .tag-plugin.quot:not(span) {
   display: flex;
   align-self: center;
-  align-items: center;
   border-bottom: none;
+  font-weight: 700;
   padding: 16px 24px 8px 24px;
   line-height: 1.2;
 }
-.md .tag-plugin.quot:first-child {
+.md .tag-plugin.quot:not(span):first-child {
   margin-top: 1.5rem;
 }
-.md .tag-plugin.quot a.headerlink:before {
+.md .tag-plugin.quot:not(span) a.headerlink:before {
   content: '';
 }
 @media screen and (max-width: 500px) {
-  .md .tag-plugin.quot {
+  .md .tag-plugin.quot:not(span) {
     padding: 16px 20px 8px;
   }
 }
-article.md.content .quot {
+article.md.content .quot:not(span) {
   color: var(--text-p0);
 }
 article.md.content h1.quot {
@@ -2363,20 +2365,20 @@ article.md.content h6.quot {
 article.md.content p.quot {
   font-size: 1.125rem;
 }
-.md .tag-plugin.quot[type=text]:before,
-.md .tag-plugin.quot[type=text]:after {
+.md .tag-plugin.quot[type=text]:not(span):before,
+.md .tag-plugin.quot[type=text]:not(span):after {
   content: "";
   position: absolute;
   width: 8px;
   height: 14px;
 }
-.md .tag-plugin.quot[type=text]:before {
+.md .tag-plugin.quot[type=text]:not(span):before {
   top: 8px;
   left: 0;
   border-top: 6px solid #ff5722;
   border-left: 6px solid #ff5722;
 }
-.md .tag-plugin.quot[type=text]:after {
+.md .tag-plugin.quot[type=text]:not(span):after {
   right: 0;
   bottom: 0;
   border-right: 6px solid #ff5722;
@@ -2388,17 +2390,35 @@ article.md.content h1.quot[type=text]:after {
   height: 20px;
   border-width: 8px;
 }
-.md .tag-plugin.quot[type=icon] .icon {
+.md .tag-plugin.quot[type=icon]:not(span) .icon {
   height: 1.5em;
   display: inline-block;
   color: #ff5722;
   border-radius: 0;
 }
-.md .tag-plugin.quot[type=icon] .icon.prefix {
+.md .tag-plugin.quot[type=icon]:not(span) .icon.prefix {
   margin-right: 0.5rem;
 }
-.md .tag-plugin.quot[type=icon] .icon.suffix {
+.md .tag-plugin.quot[type=icon]:not(span) .icon.suffix {
   margin-left: 0.5rem;
+}
+.md span.tag-plugin.quot {
+  font-weight: 500;
+}
+.md span.tag-plugin.quot:before,
+.md span.tag-plugin.quot:after {
+  color: #ff5722;
+  font-weight: 900;
+}
+.md span.tag-plugin.quot:before {
+  content: "「";
+  margin-left: -0.125em;
+  margin-right: 0.125em;
+}
+.md span.tag-plugin.quot:after {
+  content: "」";
+  margin-left: 0.125em;
+  margin-right: -0.125em;
 }
 .sites-wrap .group-header {
   margin: 1rem 0;
@@ -3753,7 +3773,9 @@ article.md.content.indent h6 {
   text-align: center;
 }
 article.md.content.indent >h2:not([class]) {
+  align-self: center;
   border-bottom-style: dashed;
+  border-bottom-color: #ff5722;
 }
 article.md.content >:first-child {
   margin-top: 1rem;
@@ -3813,7 +3835,8 @@ article.md.content h6:hover a.headerlink:before {
   margin-top: calc(var(--gap-p) - 4px);
   margin-bottom: calc(var(--gap-p) - 4px);
 }
-.md .tag-plugin {
+.md .tag-plugin,
+.md iframe {
   margin-top: var(--gap-p);
   margin-bottom: var(--gap-p);
 }
@@ -3872,6 +3895,9 @@ article.md p {
 article.md pre {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+}
+article.md .center {
+  align-self: center;
 }
 article.md>div {
   margin: var(--gap-p) 0;
