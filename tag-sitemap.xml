@@ -24,6 +24,13 @@
     </url>
 
     <url>
+        <loc>https://www.hermitlsr.top/blog/tags/tencent-cloud/</loc>
+        <lastmod>2021-08-30T14:08:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.hermitlsr.top/blog/tags/Github-Action/</loc>
         <lastmod>2021-08-30T14:08:17.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,6 +40,13 @@
     <url>
         <loc>https://www.hermitlsr.top/blog/tags/Hexo/</loc>
         <lastmod>2021-08-30T14:08:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.hermitlsr.top/blog/tags/tencent-cloud%EF%BC%8Cserverless/</loc>
+        <lastmod>2021-08-24T12:46:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
