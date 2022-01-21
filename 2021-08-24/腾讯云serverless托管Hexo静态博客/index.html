@@ -232,12 +232,12 @@ var _hmt = _hmt || [];
 <h3 id="33-使用-sls-deploy-进行部署"><a class="markdownIt-Anchor" href="#33-使用-sls-deploy-进行部署"></a> 3.3 使用 <code>sls deploy</code> 进行部署</h3>
 <p>直接使用 <code>sls deploy</code> 是看不到部署细节的，需使用 <code>sls deploy -debug</code>。另外，每次部署时需同过登录链接登录腾讯云验证，或者配置全局用户授权。<br />
 由于我还需要部署到 github 上，我的部署命令一般如下：</p>
-<div class="tag-plugin copy"><input class="copy-area" readonly id="copy_5" value="hexo c && hexo g && hexo d && sls deploy -debug"><button class="copy-btn" onclick="util.copy(&quot;copy_5&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824143928.png!watermark" style="width: 500px">
+<div class="tag-plugin copy"><input class="copy-area" readonly id="copy_5" value="hexo clean && hexo g && hexo d && sls deploy -debug"><button class="copy-btn" onclick="util.copy(&quot;copy_5&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824143928.png!watermark"/></div></div>
 <p>部署完成后，进入腾讯云的控制台可以发现在 Serverless 应用中创建了名为 <code>hermitlsr-blog-app</code> 的应用，点击访问应用即可访问到你部署的博客。</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824144313.png!watermark">
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824144313.png!watermark"/></div></div>
 <p>博客的所有静态资源都在 腾讯云的 cos 存储桶中，它创建了一个名为 <code>hermitlsr-blog-bucket-appID</code> 的存储桶：</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824223347.png!watermark">
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824223347.png!watermark"/></div></div>
 <p>到目前为止博客已经部署到通过 <code>serverless 应用</code> 部署到腾讯云上了，但是还没有 <code>CNAM</code> 到自己的域名。</p>
 <h3 id="34-自定义域名"><a class="markdownIt-Anchor" href="#34-自定义域名"></a> 3.4 自定义域名</h3>
 <p>自定义域名都是通过在域名解析上使用 <code>CNAME</code> 重定向实现。<br />
@@ -278,8 +278,8 @@ var _hmt = _hmt || [];
 </table>
 <p>而对于腾讯云，使用 CDN 和不使用 CDN 记录值是不一样的。</p>
 <p>不使用 CDN :</p>
-<p>进入存储桶，打开域名与传输管理部分，其中在<mark class="tag-plugin label red">自定义源站域名</mark>中添加自己的自定义域名，注意源站类型选择 <mark class="tag-plugin label red">静态网址源站</mark>，其中 CNAME 为解析里要设置的记录值。<br />
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824170021.png!watermark" alt="" /></p>
+<p>进入存储桶，打开域名与传输管理部分，其中在<mark class="tag-plugin label red">自定义源站域名</mark>中添加自己的自定义域名，注意源站类型选择 <mark class="tag-plugin label red">静态网址源站</mark>，其中 CNAME 为解析里要设置的记录值。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824170021.png!watermark"/></div></div>
 <p>设置如下：</p>
 <table>
 <thead>
@@ -312,8 +312,8 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <p>使用 CDN 要麻烦一些，首先要设置 CDN (这不废话么)：</p>
-<p>还是刚才的页面，在上面的<mark class="tag-plugin label red">自定义</mark>中添加自己的自定义域名，其中 CNAME 为解析里要设置的记录值。<br />
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824154657.png!watermark" alt="" /></p>
+<p>还是刚才的页面，在上面的<mark class="tag-plugin label red">自定义</mark>中添加自己的自定义域名，其中 CNAME 为解析里要设置的记录值。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/serverless/20210824154657.png!watermark"/></div></div>
 <p>设置如下：</p>
 <table>
 <thead>
@@ -525,6 +525,9 @@ var _hmt = _hmt || [];
   }
   if ('true' == 'true') {
     stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","comment":{"enable":null,"selector":null}});
   }
 </script>
 
