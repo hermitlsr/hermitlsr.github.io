@@ -78,6 +78,7 @@ var _hmt = _hmt || [];
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
 
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
@@ -87,6 +88,8 @@ var _hmt = _hmt || [];
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   <title>Volantis 建站记录 - HERMITLEE</title>
+
+  
 
   
     <meta name="description" content="本文记录了自己使用Volantis主题建站时操作的一些内容，或简或繁，主要是为了方便日后主题升级，设备更换时能够顺利迁移，同时向参考的一些站点博主表示感谢。">
@@ -176,7 +179,6 @@ var _hmt = _hmt || [];
       
 
       
-
 
 <div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">HERMITLEE</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/blog/categories/Hexo/">Hexo</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/blog/categories/Hexo/volantis/">volantis</a></div><div id="post-meta">发布于&nbsp;<time datetime="2021-06-26T22:04:56.000Z">2021年6月26日</time></div></div>
 
@@ -399,7 +401,7 @@ var _hmt = _hmt || [];
 
       
 <footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a><a href="/wiki/tags/%E8%A1%A5%E5%85%85%E7%AC%94%E8%AE%B0/">补充笔记</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/about/#comments">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/hermitlsr">GitHub</a><a target="_blank" rel="noopener" href="https://volantis.hermitlsr.top">分站</a><a target="_blank" rel="noopener" href="https://notestree.hermitlsr.top">笔记</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
-<p>本站由 <a href="https://www.hermitlsr.top/">@hermitlee</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.6.1" title="v1.6.1">Stellar</a> 作为主题。</p>
+<p>本站由 <a href="https://www.hermitlsr.top/">@hermitlee</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.7.0" title="v1.7.0">Stellar</a> 作为主题。</p>
 <p>本站托管于 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>，<a target="_blank" rel="noopener" href="https://github.com/">Github Page</a> ，使用 <a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral">又拍云</a> 作为图床。</p>
 <p>备案信息：渝ICP备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">2021006569</a>号，公安备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">50011702500564</a>号，萌ICP备<a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20201324">20201324</a>号</p>
 </div></footer>
@@ -505,7 +507,7 @@ var _hmt = _hmt || [];
       }
     }
   };
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.6.1';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.7.0';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
@@ -538,6 +540,9 @@ var _hmt = _hmt || [];
   }
   if ('true' == 'true') {
     stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img","comment":{"enable":null,"selector":null}});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
   }
 </script>
 
