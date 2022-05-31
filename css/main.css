@@ -2029,6 +2029,16 @@ details.folding[child=codeblock]>div.body .highlight .code:before {
   font-weight: 700;
   font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
 }
+.md h1 sup,
+.md h2 sup,
+.md h3 sup,
+.md h4 sup,
+.md h1 sub,
+.md h2 sub,
+.md h3 sub,
+.md h4 sub {
+  font-size: 0.85rem;
+}
 .md .tag-plugin.label {
   padding: 0 2px;
   border-radius: 6px;
@@ -2988,7 +2998,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .logo-wrap a.avatar:hover div.bg {
   opacity: 1 !important;
-  animation: spin infinite 1s;
+  animation: spin infinite 4s;
   animation-timing-function: linear;
 }
 .logo-wrap a.title {
