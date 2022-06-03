@@ -73,7 +73,7 @@ var _hmt = _hmt || [];
   </script>
   <meta name="generator" content="Hexo 5.4.0">
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,follow">
+  
 
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
@@ -87,18 +87,22 @@ var _hmt = _hmt || [];
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>分类：volantis - HERMITLEE</title>
+  <title>Git：搭建 Git 服务器 - HERMITLEE</title>
 
   
-    <meta name="description" content="HERMITLEE 尚在求学中，统计专业，喜欢编程和数学，对统计学习感兴趣。">
+    <meta name="description" content="网上相关教程挺多，但是步骤略繁琐，本文将借助 Gitblit 开源工具使用最简单的方式搭建和维护 Git 服务器，支持 Linux、Windows、Mac 平台。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="HERMITLEE">
-<meta property="og:url" content="https://www.hermitlsr.top/blog/categories/Hexo/volantis/">
+<meta property="og:title" content="搭建 Git 服务器">
+<meta property="og:url" content="https://www.hermitlsr.top/wiki/git/git-server/">
 <meta property="og:site_name" content="HERMITLEE">
-<meta property="og:description" content="HERMITLEE 尚在求学中，统计专业，喜欢编程和数学，对统计学习感兴趣。">
+<meta property="og:description" content="网上相关教程挺多，但是步骤略繁琐，本文将借助 Gitblit 开源工具使用最简单的方式搭建和维护 Git 服务器，支持 Linux、Windows、Mac 平台。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/gitblit01.jpg">
+<meta property="article:published_time" content="2022-06-03T11:47:56.467Z">
+<meta property="article:modified_time" content="2022-06-03T11:47:56.467Z">
 <meta property="article:author" content="hermitlee">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/gitblit01.jpg">
   
   
 
@@ -119,11 +123,11 @@ var _hmt = _hmt || [];
 
   
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
     
-      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+      <script defer src="https://fastly.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
     
-      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+      <script defer src="https://fastly.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
     
       <link rel="preconnect" href="https://s1.hdslb.com/" />
     
@@ -138,84 +142,86 @@ var _hmt = _hmt || [];
   
 
 
+
+
   <div class='l_body' id='start'>
-    <aside class='l_left' layout=''>
+    <aside class='l_left' layout='wiki'>
     
 
 
 <header class="header">
 
-<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://doc.hermitlsr.top/web/rickavatar.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/752273.png';"></a><a class="title" href="/"><div class="main">HERMITLEE</div><div class="sub normal cap">道阻且长，行则将至</div><div class="sub hover cap" style="opacity:0">www.hermitlsr.top</div></a></div>
-<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">便笺</a><a class="nav-item" href="/about/">更多</a></nav></header>
-
-<div class="widgets">
-<div class="widget-wrap" id="markdown"><div class="widget-header cap dis-select"><span class="name">公告</span></div><div class="widget-body fs14"><p>欢迎您的到来，这是hermitlee的个人学习记录站。<br />
-如有添加友链意向，请看<a href="https://www.hermitlsr.top/friends/">友链</a>。<br />
-我的博客朋友圈：<a href="https://www.hermitlsr.top/friend-circle/">朋友圈</a>。<br />
-<a target="_blank" rel="noopener" href="https://travellings.link"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://travellings.link/assets/w.png" alt="开往-友链接力" width="100"></a></p>
-<hr>
-今日诗词：
-<span id="jinrishici-sentence">正在加载今日诗词....</span> <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-</div></div>
-
-<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022-01-19/%E5%93%94%E5%93%94%E7%82%B9%E5%95%A5-%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/">BBer：哔哔点啥-配置记录</a></div><div class="more-item"><a class="title" href="/2022-01-12/%E9%87%8D%E5%90%AF%E5%8D%9A%E5%AE%A2/">重启博客，重启时光</a></div><div class="more-item"><a class="title" href="/2021-09-30/%E6%A1%A3%E6%A1%88%E9%A3%8E%E6%B3%A22/">档案风波2</a></div><div class="more-item"><a class="title" href="/2021-09-23/%E6%A1%A3%E6%A1%88%E9%A3%8E%E6%B3%A2/">档案风波</a></div><div class="more-item"><a class="title" href="/2021-08-30/%E5%AF%85%E5%93%A5%E5%84%BF/">寅哥儿</a></div></div></div>
-</div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="RSS" href="/atom.xml" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/25678f144c438.svg"/></a><a class="social" title="GitHub" href="https://github.com/hermitlsr" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/08a41b181ce68.svg"/></a><a class="social" title="QQ" href="http://wpa.qq.com/msgrd?v=3&uin=1165749128&site=qq&menu=yes" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/qq32.svg"/></a><a class="social" title="Comments" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/942ebbf1a4b91.svg"/></a></div></footer>
-
-    </aside>
-    <div class='l_main list'>
-      
-  
-
-<header class="header mobile-only">
-
-<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://doc.hermitlsr.top/web/rickavatar.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/752273.png';"></a><a class="title" href="/"><div class="main">HERMITLEE</div><div class="sub normal cap">道阻且长，行则将至</div><div class="sub hover cap" style="opacity:0">www.hermitlsr.top</div></a></div>
+<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki/"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/git/"><div class="main">Git 实用教程</div></a></div>
 </header>
 
+<div class="widgets">
+
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/git/"><span class="toc-text">认识 Git</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/git/install-and-config/"><span class="toc-text">安装与配置</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/git/usage/"><span class="toc-text">基本操作入门</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/git/git-server/"><span class="toc-text">搭建 Git 服务器</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA"><span class="toc-text"> 服务器搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-jdk"><span class="toc-text"> 安装 JDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AE-gitblit"><span class="toc-text"> 安装并配置 Gitblit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="toc-text"> 启动服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AE%BF%E9%97%AE"><span class="toc-text"> 客户端访问</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/git/github/"><span class="toc-text">使用 GitHub</span></a></div></div></div>
 
 
-      
 
-  
-
-
-  <div class='nav-wrap'>
-  <nav class='sub post cap'>
-    
-      <a href='/'>近期发布</a>
-    
-    
-      
-        <a class='active' href='/blog/categories/'>分类：volantis</a>
-      
-    
-    
-      
-        <a href='/blog/tags/'>标签</a>
-      
-    
-    
-      
-        <a href='/blog/archives/'>归档</a>
-      
-    
-    
-    <a  href='/bbtalk/'>闲话</a>
-    
-  </nav>
+<div class="widget-wrap" id="related"><div class="widget-header cap dis-select"><span class="name">更多笔记</span></div><div class="widget-body fs14"><a class="more-item wiki" href="/wiki/Essense-of-Linear-Algebra/">线性代数的本质<div class="excerpt">3Blue1Brown 线性代数本质专题的小记</div></a><a class="more-item wiki" href="/wiki/R-notes/">R语言笔记<div class="excerpt">一些基础的使用方法，很多笔记找不到了，仅存，待补充！！！</div></a><a class="more-item wiki" href="/wiki/Time-series-notes/">时序分析<div class="excerpt">一些基础的使用方法，很多笔记找不到了，仅存，待补充！！！</div></a></div></div>
 </div>
 
-  <div class="post-list post"><a class="post-card post " href="/2021-06-26/Volantis-%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/">
-<article class="md"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/cover/cover-volantis.png"/></div><h2 class="post-title">Volantis 建站记录</h2><div class="excerpt"><p>  本文记录了自己使用Volantis主题建站时操作的一些内容，或简或繁，主要是为了方便日后主题升级，设备更换时能够顺利迁移，同时向参考的一些站点博主表示感谢。</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2021-06-26T22:04:56.000Z">2021年6月26日</time></span><span class="cap breadcrumb">Hexo</span></div></article>
-</a></div>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+  
+  
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">HERMITLEE</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/git/">Git 实用教程</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-06-03T11:47:56.467Z">2022年6月3日</time></div></div>
+
+  <article class='content md wiki'>
+  <h1 class="article-title"><span>搭建 Git 服务器</span></h1>
+  <p>网上相关教程挺多，但是步骤略繁琐，本文将借助 Gitblit 开源工具使用最简单的方式搭建和维护 Git 服务器，支持 Linux、Windows、Mac 平台。</p>
+<span id="more"></span>
+<h2 id="服务器搭建"><a class="markdownIt-Anchor" href="#服务器搭建"></a> 服务器搭建</h2>
+<h3 id="安装-jdk"><a class="markdownIt-Anchor" href="#安装-jdk"></a> 安装 JDK</h3>
+<p>下载并安装 JDK：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase-downloads.html">https://www.oracle.com/java/technologies/javase-downloads.html</a></p>
+<h3 id="安装并配置-gitblit"><a class="markdownIt-Anchor" href="#安装并配置-gitblit"></a> 安装并配置 Gitblit</h3>
+<ul>
+<li>下载 Gitblit：<a target="_blank" rel="noopener" href="https://github.com/gitblit/gitblit">https://github.com/gitblit/gitblit</a></li>
+<li>解压 Gitblit，进入目录 <code>~/gitblit-1.8.0/data/defaults.properties</code></li>
+<li>用编辑器打开 <code>defaults.properties</code></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git.repositoriesFolder = /Users/用户名/gitserver/gitRepository</span><br><span class="line">server.httpPort = 7070</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务"><a class="markdownIt-Anchor" href="#启动服务"></a> 启动服务</h3>
+<p>在终端中执行 <code>gitblit.sh</code> 脚本即可启动服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./gitblit.sh</span><br></pre></td></tr></table></figure>
+<details class="tag-plugin folding" ><summary><span>建议设置开机自启动</span></summary><div class="body"><p>通过 Mac 的自动化工具，将启动指令写成脚本，系统启动后自动运行脚本即可。<br />Windows 平台可以添加到启动计划任务中。</p></div></details>
+<h2 id="客户端访问"><a class="markdownIt-Anchor" href="#客户端访问"></a> 客户端访问</h2>
+<p>用服务器 IP + 端口号来访问。例如我的电脑的 IP 是 <code>10.8.12.200</code>，那么在局域网内另外一台电脑访问 <code>http://10.8.12.200:7070</code> 就可以看到管理页面了：</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/gitblit01.jpg" style="width:500px;"/></div></div>
+<p>网页操作和使用 GitHub、Coding 等平台相似，非常简单。</p>
+
   
 
+
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/wiki/git/github/">使用 GitHub<span class="note">下一篇</span></a><div class="line"></div><a id="prev" href="/wiki/git/usage/">基本操作入门<span class="note">上一篇</span></a></section></div>
+
+  
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body twikoo'>
+      
+
+<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+    </div>
+  </div>
 
 
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a><a href="/wiki/tags/%E8%A1%A5%E5%85%85%E7%AC%94%E8%AE%B0/">补充笔记</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/about/#comments">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/hermitlsr">GitHub</a><a target="_blank" rel="noopener" href="https://volantis.hermitlsr.top">分站</a><a target="_blank" rel="noopener" href="https://notestree.hermitlsr.top">笔记</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">智库</span><a href="/wiki/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/about/#comments">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/hermitlsr">GitHub</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 <p>本站由 <a href="https://www.hermitlsr.top/">@hermitlee</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
 <p>本站托管于 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>，<a target="_blank" rel="noopener" href="https://github.com/">Github Page</a> ，使用 <a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral">又拍云</a> 作为图床。</p>
 <p>备案信息：渝ICP备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">2021006569</a>号，公安备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">50011702500564</a>号，萌ICP备<a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20201324">20201324</a>号</p>
