@@ -1,0 +1,380 @@
+<!--
+
+██╗  ██╗███████╗██████╗ ███╗   ███╗██╗████████╗██╗     ███████╗███████╗
+██║  ██║██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██║     ██╔════╝██╔════╝
+███████║█████╗  ██████╔╝██╔████╔██║██║   ██║   ██║     █████╗  █████╗
+██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║   ██║     ██╔══╝  ██╔══╝
+██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║   ██║   ███████╗███████╗███████╗
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝
+
+* ░░░░░░░░░░░░░░░░░░░░░░░░▄░░
+* ░░░░░░░░░▐█░░░░░░░░░░░▄▀▒▌░
+* ░░░░░░░░▐▀▒█░░░░░░░░▄▀▒▒▒▐
+* ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+* ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+* ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
+* ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒
+* ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+* ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄
+* ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒
+* ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒
+
+　　              《蒹葭》
+
+          先秦· 《诗经·国风·秦风》
+
+　　蒹葭苍苍，白露为霜。所谓伊人，在水一方。
+
+　　溯洄从之，道阻且长。溯游从之，宛在水中央。
+
+　　蒹葭萋萋，白露未晞。所谓伊人，在水之湄。
+
+　　溯洄从之，道阻且跻。溯游从之，宛在水中坻。
+
+　　蒹葭采采，白露未已。所谓伊人，在水之涘。
+
+　　溯洄从之，道阻且右。溯游从之，宛在水中沚。
+
+#######################################################
+
+-->
+
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?190ce95d54ce32d0d767e1d96e3e1ad7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<head>
+  <!-- 谷歌站点验证 -->
+  <meta name="google-site-verification" content="jyK8ig65NSyIhRJGkI_mRSDH46ZbLic9TZBLlaXY7II" />
+  <!-- 百度站点验证 -->
+  <meta name="baidu-site-verification" content="code-AAFd9gcXEW" />
+  <!-- 百度主动推送 -->
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <meta name="generator" content="Hexo 5.4.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>technique：故事大全 - HERMITLEE</title>
+
+  
+    <meta name="description" content="弃子 吴嫡一个消失的叛徒，一种恶魔般的药剂，一盘灭绝人性的棋局，一枚被历史遗忘的弃子……　　1.飞来横祸　　日伪统治时期，北平白天看上去还算热闹，可一到晚上，立刻就冷清了，买卖铺子都早早地关了门。唯独有一条街还算热闹，那就是琉璃街 。在这乱世，还敢在这条街上做古董生意的，一般都有点靠山。　　雅古斋 是这条街上新开业的铺子。这天晚上，张老板正眯着眼睛在后堂喝茶，前面招呼生意的伙计忽然喊了起来：“这是">
+<meta property="og:type" content="website">
+<meta property="og:title" content="故事大全">
+<meta property="og:url" content="https://www.hermitlsr.top/wiki/technique/II-002/">
+<meta property="og:site_name" content="HERMITLEE">
+<meta property="og:description" content="弃子 吴嫡一个消失的叛徒，一种恶魔般的药剂，一盘灭绝人性的棋局，一枚被历史遗忘的弃子……　　1.飞来横祸　　日伪统治时期，北平白天看上去还算热闹，可一到晚上，立刻就冷清了，买卖铺子都早早地关了门。唯独有一条街还算热闹，那就是琉璃街 。在这乱世，还敢在这条街上做古董生意的，一般都有点靠山。　　雅古斋 是这条街上新开业的铺子。这天晚上，张老板正眯着眼睛在后堂喝茶，前面招呼生意的伙计忽然喊了起来：“这是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/01/04/UvHcsa73jQPnobq.png">
+<meta property="article:published_time" content="2022-06-06T11:31:03.295Z">
+<meta property="article:modified_time" content="2022-06-06T11:31:03.295Z">
+<meta property="article:author" content="hermitlee">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/01/04/UvHcsa73jQPnobq.png">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="HERMITLEE" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://doc.hermitlsr.top/web/rick32.png">
+  
+
+  
+    
+      <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    
+      <script defer src="https://fastly.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    
+      <script defer src="https://fastly.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+      <link rel="preconnect" href="https://s1.hdslb.com/" />
+    
+      <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="all" onload="this.media='all'" />
+    
+      <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="all" onload="this.media='all'" />
+    
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='wiki'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki/"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>智库</a><a class="title" href="/wiki/technique/"><div class="main">就这么记</div></a></div>
+</header>
+
+<div class="widgets">
+
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">技巧</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/technique/"><span class="toc-text">前言</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/technique/I-001/"><span class="toc-text">1/(sinx＋cosx) 的不定积分</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/technique/I-002/"><span class="toc-text">牛顿迭代法求开 n 次方</span></a></div></div><div class="widget-header cap dis-select"><span class="name">语言</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/technique/II-001/"><span class="toc-text">语言艺术</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/technique/II-002/"><span class="toc-text">故事大全</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%83%E5%AD%90"><span class="toc-text">弃子</span></a></li></ol></div></div></div>
+
+
+
+<div class="widget-wrap" id="related"><div class="widget-header cap dis-select"><span class="name">更多笔记</span></div><div class="widget-body fs14"><a class="more-item wiki" href="/wiki/git/">Git 实用教程<div class="excerpt">Git 是目前世界上最先进的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</div></a><a class="more-item wiki" href="/wiki/Essense-of-Linear-Algebra/">线性代数的本质<div class="excerpt">3Blue1Brown 线性代数本质专题的小记</div></a><a class="more-item wiki" href="/wiki/R-notes/">R语言笔记<div class="excerpt">一些基础的使用方法，很多笔记找不到了，仅存，待补充！！！</div></a><a class="more-item wiki" href="/wiki/Time-series-notes/">时序分析<div class="excerpt">一些基础的使用方法，很多笔记找不到了，仅存，待补充！！！</div></a></div></div>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+  
+  
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">HERMITLEE</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">智库</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/technique/">就这么记</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-06-06T11:31:03.295Z">2022年6月6日</time></div></div>
+
+  <article class='content md wiki'>
+  <h1 class="article-title"><span>故事大全</span></h1>
+  <h2 class="tag-plugin quot" type="icon" id="弃子"><a href="#弃子" class="headerlink" title="弃子"></a><img class="icon prefix lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/01/04/UvHcsa73jQPnobq.png" />弃子</h2>
+<div class="tag-plugin poetry"><div class="meta"><span>吴嫡</span></div><div class="body"><p>一个消失的叛徒，一种恶魔般的药剂，一盘灭绝人性的棋局，一枚被历史遗忘的弃子……<br />　　1.飞来横祸<br />　　日伪统治时期，北平白天看上去还算热闹，可一到晚上，立刻就冷清了，买卖铺子都早早地关了门。唯<br />独有一条街还算热闹，那就是琉璃街 。在这乱世，还敢在这条街上做古董生意的，一般都有点靠山。<br />　　雅古斋 是这条街上新开业的铺子。这天晚上，张老板正眯着眼睛在后堂喝茶，前面招呼生意的伙计忽然<br />喊了起来：“这是干什么？你们是什么人？”张老板眉头一皱，放下茶壶正要出去，伙计已经被几个黑衣人<br />推搡着进了后堂。<br />　　张老板一惊，看着这几个黑衣人，以为遇上绑票的了，他清清嗓子说：“几位想发财，可能找错地方了<br />吧。”<br />　　有个领头的黑衣人冷冷地说：“错不了，你是张老板吧，或者叫金角。给我搜！”<br />　　张老板急了：“什么金角银角？兄弟，要钱的话说个数，别动粗啊！”<br />　　领头的看了他一眼说：“你拿我们当土匪了？别装了，你一眼就看出我们是什么人了吧。自我介绍一<br />下，我是特高课的行动队长刘峰，久闻你金角的大名了，想不到就在我眼皮子底下。”<br />　　张老板一愣：“特高课？误会呀误会，我也是给皇军办事的，这不是大水冲了龙王庙 吗？宪兵队的山本<br />少佐，就是这家店的股东啊。”<br />　　刘峰也愣了愣，但马上挥手说：“搞情报工作的，不会唬人怎么行？要真有这事，特高课会不知道？别<br />废话了，等把电台搜出来，你需要交代的多着呢。”<br />　　张老板拿起电话说：“我这里没有什么电台，我跟你说不清楚，我给山本少佐打电话。”刘峰一把按住<br />电话，用枪顶在张老板头上说：“你敢拨一下，我就打死你。”<br />不知道该取什么名<br />　　张老板急得吼起来：“你这混蛋，老子也不是好惹的！”刘峰冷笑一声，用枪把打在张老板的头上，张<br />老板顿时瘫倒在地。<br />　　这时，屋子里已被翻得乱七八糟，古董倒是翻出来不少，瓶瓶罐罐和字画被随意地扔在地上，但始终没<br />翻到电台。刘峰在屋子里仔细寻找着蛛丝马迹，终于在地板上找到一处异样。他用手在地板缝里摸索着，然<br />后一抬，果然掀起来一块地板，地板下面有个暗室。刘峰得意地冷笑道：“你还有什么可说的吗？”<br />　　张老板被人死死捆住，急得满头大汗：“那里面的东西不能动啊，要掉脑袋的！”<br />　　刘峰哈哈大笑道：“你放心，只要你老老实实交代出其他同伙，脑袋掉不了，还能发财呢。”<br />　　刘峰下到暗室里，打开手电，顿时觉得目眩神迷。小屋里满满的都是古董，跟外面比起来可不是一个档<br />次的，还有一叠叠的金条，可这些都不是刘峰想要找的东西。他疯狂地翻找着，但小屋很小，转眼就翻完<br />了，根本就没有电台。刘峰跳上来，照着张老板就是一拳，恶狠狠地说：“电台究竟在哪儿？不说出来，老<br />子在这儿就剥了你的皮。”<br />　　张老板 痛得蜷缩着身体，嘴里却不服软：“你找死！”<br />　　这时，外面传来了砸门声，刘峰歪头示意，一个手下从店门缝隙里往外看了看，回来报告说：“队长，<br />是宪兵队的。”只听外面传来一阵叽里呱啦的日本人说话声，还夹杂着翻译的声音：“里面的人快开门，宪<br />兵队查夜！”<br />　　刘峰叫手下打开门，一队日本兵冲进来，举枪逼住了黑衣特工们，刘峰赶紧掏出证件：“特高课办案！<br />别误会！”<br />　　一个少佐军官冲进屋，上来就给了刘峰一嘴巴。翻译则忙着给张老板松绑，嘴里埋怨着：“特高课办案<br />也不能随便打人啊。天哪，这些古董你们怎么能这么糟蹋？”<br />　　少佐军官掏出手枪，怒气冲冲地对着刘峰。刘峰见势不妙，赶紧说：“我们是奉命行事，有人举报这里<br />是军统的情报部门。”<br />　　张老板在一旁吼叫着：“我早跟你解释了，你偏不信。我怀疑你就是假借办案，想黑了我们的古董和金<br />条！”<br />　　刘峰和几个特高课的人被抓进了宪兵队，虽然没被严刑拷打，但也挨了不少拳脚，直到半夜，才被得知<br />情况的特高课给接了回去。<br />　　上司告诉刘峰，刚跟军部里的人沟通过，那家古董店名义上是中国人开的，其实是军部高层的人参与<br />的，他们一边打仗，一边搜刮了很多中国的古董，这些东西需要有渠道变成黄金。因为见不得光，所以由山<br />本出面，和姓张的汉奸合作开店；也因为过于秘密，特高课竟然不知道。<br />　　2.失效神药<br />　　刘峰莫名挨了打，不禁怒火冲天，他来到了特高课的审讯室。审讯室的刑架上绑着一个男人，遍体鳞<br />伤，不成人样，已昏死过去，一个日本军医正在翻看他的眼皮。<br />　　刘峰压住火气，对日本军医说：“怎么样，傻了吗？”军医点点头，用生硬的汉语说：“不出所料，药<br />物的副作用已经把他变成白痴了。”<br />　　刘峰恼火地说：“我就说你那药不灵，现在他也傻了，你知道我抓住一个国民党的特务有多难吗？本来<br />还指望他立大功呢，现在都让你的神药给毁了。”<br />　　日本军医满脸惭愧地说：“我根据以往的试验，以为万无一失了，没想到中国特工确实比普通人厉害，<br />在注射药物后还能提供假情报，是我的失职。”<br />　　刘峰也不敢对日本军医太凶，这事只能打落牙齿自己吞，当下换上笑脸说：“算了算了，都是为了大日<br />本帝国效力，不能互相埋怨。这次被这小子耍了，得罪了军部，你是军部看重的专家，还要请你去解释误<br />会，特高课 没有军部的支持，很难工作。”<br />　　军医连连点头，表示一定会办，然后又观察了一会儿刑架上的男人，垂头丧气地走了。刘峰摸着被宪兵<br />打肿的脸，忍不住又狠狠地给了那男人两鞭子。<br />　　男人身体微微一颤，睁开眼睛。那是一双无神的眼睛，茫然地看着刘峰，又像是什么也没看见，他“呵<br />呵”笑了两声，才感觉到身上的剧痛，又哇哇大哭起来。<br />　　一个手下对刘峰说：“军医说，他确实变成傻子了，咱们留着也没用，做了吧。”<br />　　刘峰心疼地说：“这可是银边，你知道在北平，国民党的特工只有三个银边，就这么让那个日本笨蛋给<br />毁了，还是什么专家呢。”<br />　　手下说：“一个金角，三个银边，剩下的就都是草肚了，他确实算是大人物了。”<br />　　国民党在北平区 的特工是以围棋为名的。围棋术语里有金角银边草肚皮的说法，就是说棋子在棋盘上的<br />位置，角是必争之地，边是战略要地，至于中心地带的子，丢几个不重要，所以叫金角银边草肚皮。刘峰好<br />不容易破译了多份情报才弄清了这份组织架构，又幸运地抓住了一个银边，本指望顺藤摸瓜找到金角，铲除<br />北平的国军情报机构，不料却功败垂成。<br />　　忽然，刘峰眼睛一亮：“咱们知道他变傻了，国民党可不知道。咱们把他送到日本人的医院去养着，国<br />民党肯定会派人营救，到时咱们就守着鱼饵钓大鱼！”<br />　　第二天，日本人的东亚友好医院里收治了这个叫王飞 的病人。虽然是日本人的医院，但里面的医生护士<br />很多都是中国人，他们对病人是一视同仁的，只要是病人，都会尽力救治。但在王飞身上，他们束手无策，<br />因为他们发现，王飞的大脑已经发生了不可逆转的病变，而这种病变，他们谁也没见过。无奈之下，只能派<br />一个护士好好照顾他。<br />　　小护士叫刘萍 ，是刘峰的远房亲戚，托刘峰的关系进的医院。她热情善良，把王飞照顾得很好。王飞现<br />在的智商相当于三岁的孩子，他很快就极度依赖刘萍，没有刘萍，连饭都吃不下去。<br />　　刘峰一直派人盯着，当然也交代刘萍，任何人来探望王飞，都要马上报告。可国军特工的警惕性也很<br />高，一次都没有露过面。<br />　　这天，刘萍在用轮椅推着王飞散步时，趁左右无人，刘萍小声对王飞说：“我知道你是国民党的特工，<br />我想救你出去，你如果明白就告诉我。”<br />　　王飞茫然地看着刘萍，只是“嘿嘿”地傻笑。<br />　　刘萍说：“我知道你不一定相信我，我明确告诉你，其实我也是特工，不过我不是国民党的，我是共产<br />党的人。我在延安受过培训，如果你不愿意回去，我可以把你送到延安去。你是抗日英雄，我们欢迎你这样<br />的人。”<br />　　王飞的表情毫无变化，依旧咬着手指头“嘿嘿”地傻笑。<br />　　刘萍叹了口气，其实她知道王飞的情况，但她仍然盼望能有奇迹发生。她忘不了第一次和王飞见面时，<br />王飞那英气勃勃的样子。<br />　　那时她刚来到这个医院，需要拍入职照片。当时王飞还是个摄影师，开着一家照相馆，很多达官贵人都<br />曾光顾过他的照相馆。那会儿，刘萍凭着一个特工的敏锐，能感觉到王飞对那些汉奸和日本人的不屑。尽管<br />他看起来彬彬有礼，但刘萍就是能感觉到。<br />　　直到王飞被送进医院，刘萍才从上级的口中得知，他竟然是个特工，而且还是“银边”！<br />　　晚上，刘萍回到自己的公寓，忽然发现包里多了一张纸，打开一看，竟是一张银行存票！<br />　　3.神秘金角<br />　　这张银行存票 的金额不小，足够一个人生活十年。存票背面还贴着张纸条，上面的字都是从报纸上剪下<br />来的：“我观察你很久了，知道你是个好人。请好好照顾王飞，不成敬意。”后面是一串密码。<br />　　刘萍看着纸条出了半天神，然后小心翼翼地藏了起来。<br />　　过了两天，刘萍来到银行，拿出银行存票，问能不能看出是谁存的。银行经理礼貌地告诉她，这是无记<br />名存票，只要有存票和密码就能取钱，不过是无法查出最初的存款人的。<br />　　刘萍没有取款，她猜这个人一定就是金角 。刘萍也是经过训练的特工，但被人把存票塞进包里竟然毫无<br />知觉，而且这人说已经观察她很久了，她竟然也没有察觉，可见对方是个非常厉害的特工，只有金角才有这<br />样的水平吧。<br />　　刘萍向上级汇报了情况，上级回复她，由于怀疑银边是被内部人出卖的，国民党内部正在严查内鬼，并<br />且双方特工高层已经达成默契，共产党方面也将协助一起调查。毕竟这个内鬼出卖的是抗日英雄，毁灭的是<br />抗日力量。但不管两边如何努力，却始终查不出内鬼是谁。这内鬼行动了一次之后，就好像消失了一样。<br />　　除了那张银行存票，再也没有其他动作，国民党似乎遗忘了王飞，由于一直没有鱼上钩，刘峰也失去了<br />耐心，不再派人跟踪了，只是让刘萍注意监视。<br />　　在刘萍无微不至的照顾下，王飞的伤势一点点好转了，但他双腿腿骨被打断了几节，只能靠双拐走路。<br />一条胳膊也被打残废了。满身的伤疤，到处都是烙铁印，原本英俊的脸上布满了伤痕，由于那些伤口都用盐<br />水浸泡过，皮肉收缩，再也难以复原。最让人难受的是，他只会傻笑和哭，连话都不会说。<br />　　刘萍含着眼泪看着他，脑海里总是难以忘怀第一次见面时他的微笑。<br />　　过了些日子，日本人的战局日渐不利，东亚友好医院里住满了日本伤兵，其他病人都被轰出去了。刘峰<br />对王飞已经不抱希望，自然也不会为他争取什么。<br />　　王飞被赶出了医院，拄着双拐茫然地站在路边。饥饿的本能让他开始翻找路边的垃圾堆，他找到半块肮<br />脏的饼，兴奋地往嘴里塞，却被人一掌打掉了。王飞咧嘴哭了起来，刘萍也哭了，她抱着王飞说：“跟我回<br />家，我给你做饭吃。”<br />　　就这样，王飞在刘萍家住下了。小小的公寓里，王飞每天扒着窗户望着大街，盼着刘萍回家。而刘萍一<br />下班就急匆匆地赶回家，她知道王飞在等她。<br />　　有一天，一拨新的日本伤兵被送进医院，所有医护人员被要求加班。刘萍半夜才得以脱身，她飞快地往<br />家跑，快到家的时候，她被黑暗中蹿出来的一个男人抱住了，拖进了巷子里。<br />　　那是个日本浪人，喝醉了酒，在街上寻找猎物。刘萍撕打着，喊叫着，希望能有巡夜的人发现。就在她<br />快没力气的时候，王飞突然出现，他举起一根拐杖狠狠地砸在浪人的头上，然后是第二下、第三下⋯⋯等刘萍<br />回过神来时，那浪人的脑袋都被砸扁了。<br />　　刘萍拉着王飞跑回家，给他刷洗拐杖。王飞却似乎忘了自己干过什么，只是委屈地看着刘萍，摸摸肚<br />子，表示他饿了。<br />　　没过几天，刘峰来医院看刘萍，说日本人要完蛋了，他打算逃走，问刘萍跟不跟他一起走。刘萍不肯，<br />刘峰也无所谓，扔下几块大洋说：“得空就跑吧，你是我亲戚，又在日本人医院上班，没准就被当成汉奸<br />了。”<br />　　刘萍抓住机会问他：“之前你送来的那个傻子，到底是咋回事啊？后来又不让住了，被赶走了，估计已<br />经饿死了，真可怜。”<br />　　刘峰叹口气说：“那是国民党的特工，我们接到一个匿名情报，说他是银边。我们突袭了他的照相馆，<br />结果真的搜出了枪和密码本。我们想通过他抓住金角，结果严刑拷打 没有用，他嘴严得很。我们才用上了军<br />部新研发的一种药物，这药是七三一部队研制的，说是很厉害，不管多硬的人，只要被注射了，就会说实<br />话。只是这药的副作用太大了，能把人脑子烧坏，几十个试验品都变成了傻子。本来我还想留着他套出更多<br />情报，可十二个小时快到了，国民党的特工有规矩，十二个小时联系不上，就会转移地点，所以我最后还是<br />用了药，没想到，这药对老特工根本不像对老百姓试验时那么好使，那小子用假情报耍了我们，自己也成了<br />傻子，再没用处了。”<br />　　刘萍低下头努力掩饰愤怒，只说了句：“真可怜。”<br />　　最后，刘峰还是没能成功逃走，他带着金条在逃跑的路上被人暗杀了，身上被人用匕首刻了字：“民族<br />罪人”。落款是金角。<br />　　4.死里逃生<br />　　日本人眼看要吃败仗了，他们也变得更加疯狂，在北平城里疯狂搜查抗日分子，只要略有怀疑，就直接<br />枪毙。<br />　　一时间古城里人人自危，刘萍接到上级命令，让她迅速转移。她汇报了王飞在自己这里，上级犹豫了一<br />阵，同意她带着王飞一起走，会在城外十里铺接应她。<br />　　刘萍雇了辆马车，以带丈夫去外地治病为由出城。王飞呆呆傻傻的样子让守城门的人放松了警惕，把他<br />们放出去了。<br />　　出城后，刘萍刚松口气，忽然两个日本人巡逻过来，其中一个认出了刘萍是医院的护士，日本人是不允<br />许医护人员离开的，因为他们的伤兵越来越多，他们抓住刘萍要押回城去。<br />　　刘萍万分焦急，自己没带武器，这里离十里铺还有很远，同志们也不可能来接应自己。一旦被日本人押<br />回去，自己和王飞肯定是要死在城里了。<br />　　正在刘萍紧张地想办法时，一声枪响，一个日本人应声倒地，另一个日本人转身寻找目标，又被一枪毙<br />命。这时，一个商贾模样的中年人从路边草丛里钻出来，把刘萍和王飞扶上一辆马车，然后赶起马车向前飞<br />奔。<br />　　刘萍惊魂未定地问：“你是什么人？为什么救我们？”中年人往车里看了看，王飞蜷缩着身子吓哭了。<br />中年人说：“我是为他而来的，我给你的银票，你为什么没用？”刘萍恍然大悟道：“你是他们说的金<br />角？”金角点点头说：“刘峰说的吧。他是你亲戚，我杀了他，你恨不恨我？”刘萍摇摇头说：“他虽然对<br />我不错，但他是汉奸。”<br />　　金角说：“我观察过你，你是个好人，王飞跟着你我放心。他不是银边了，只是个傻子，需要人照顾。<br />那银票不是我个人的，是上峰的安排。你带着王飞去重庆吧，那里安全，上峰也安排好了住处，我们不是无<br />情无义的人，会养王飞一辈子的。当然，如果你不愿意跟王飞一起，我这就带他走，你可以离开了。”<br />　　刘萍紧张地思索着，看来金角虽然观察过自己，但他并不知道自己是共产党的人，能去重庆，还有国民<br />党特工的照顾，对自己的工作可能有意想不到的好处，而且，她确实也不放心王飞。思索片刻，她点头说：<br />“我愿意去，咱们走东边的路吧，那边离车站近。”金角点点头，驾着马车驶向东边，绕过了在西边等待接<br />应刘萍的人。<br />　　在金角的安排下，刘萍和王飞有惊无险地到了重庆。刘萍和上级重新取得了联系，她一边掩藏着自己的<br />身份，一边暗地里搜集信息。金角试探着问刘萍愿不愿意和王飞结婚，刘萍考虑两天后同意了。<br />　　金角特意赶回重庆参加了婚礼，他拉着刘萍的手落泪了：“谢谢你，我替党国感谢你。”刘萍趁机提<br />出：“我想找份工作，王飞的抚恤金虽然不少，但坐吃山空也不行啊。”金角拍着胸脯说：“别的部门不好<br />说，当个机要秘书我还是能安排的，我明天就向上峰申请。你是王飞的妻子，这个面子他们必须给。”<br />　　果然，刘萍顺利地当上了机要秘书。这个职位虽然不高，但能接触到很多机密信息。<br />　　很快，日本人投降了，但内战又开始了。刘萍一下子变成了最重要的特工，因为她几乎是在敌人的心脏<br />里工作。刘萍有时也很怅然，本来大家都是齐心协力打鬼子的，怎么刚刚胜利，就成敌人了，为什么国共两<br />党就不能和平共处呢？<br />　　刘萍跟上级联系不敢通过电台，因为怕被追踪到。重庆城里有一个糕饼店，刘萍常去买点心，因为大家<br />都知道王飞爱吃点心，其实，那也是共产党的地下情报站。<br />　　有一天，刘萍忽然被叫到审讯室，几个高级特工正在审讯一个人，金角也在其中。那个人被打得血肉模<br />糊，睁眼看着刘萍，刘萍的心一下子抽紧了——那是糕饼店的伙计，自己的同志！<br />　　一个特工看着刘萍：“你认识他吗？”刘萍仔细看了看，点点头说：“我常去他家买点心。”那特工<br />说：“他是共产党的特务，你为什么偏去这家店买点心呢？”<br />　　刘萍沉着地说：“王飞就喜欢吃他家的，换了别家的他不肯吃。”<br />　　那个伙计吐了口血水说：“我说怎么就被你们盯上了，原来这女人是你们的人！早就听说你们国民党的<br />特务都靠女人干活，离了女人，什么情报也搞不到，我也算是倒了血霉了……”<br />　　不等他说完，金角上去狠狠一拳，打落了他两颗牙齿：“你嘴放干净点。”接下来又是一顿毒打，刘萍<br />在一旁看着，心里疼得直抽搐，脸上却不能表现出来。<br />　　那几个特务果然对刘萍的口气变软了：“共匪就这德性，你别往心里去。我们都是很敬佩王飞兄的，询<br />问你也是例行公事。”<br />　　刘萍刚松了口气，一个一直没说话的特务忽然问：“你是机要秘书，情报不能带出办公室这一点你应该<br />很清楚。可我在你家里搜到了你抄写的情报人员名单，这你怎么解释？”<br />　　这句话犹如晴天霹雳，刘萍只觉得天旋地转，她把那份名单藏在了自己的脂粉盒里，还没来得及送出<br />去，竟然被发现了。自己该怎么解释呢？被毒打的伙计和一旁的金角也都愣住了，呆呆地看着刘萍。刘萍昂<br />起头，泪水滚滚而下：“没错，我是抄了一份名单，而且我还给其中两个人打过电话。”那特务冷冷地逼<br />问：“为什么？”刘萍说：“因为刘峰给我听过一段录音，就是那段录音，举报了王飞。我要给名单上所有<br />的人都打一遍电话，我要找出那个出卖王飞的人！”<br />　　大家都沉默了，过了半天金角才说：“原来，你前几天给我打电话是因为这个，你又不是没跟我说过<br />话。”刘萍说：“电话里的声音和平时的声音不一样，我不确定一下怎么行？”<br />　　那特务口气也软了：“嫂夫人的心情我们都能理解，我们也想抓出那个内鬼来。不过规矩不能不遵守，<br />这次我们会替你瞒下，以后不能再这样了。”刘萍含泪点点头说：“王飞，太惨了……”金角黯然地扶着刘萍<br />出去了。<br />　　回到家，刘萍抱着王飞失声痛哭：“你知道吗？今天你又救了我一次。”王飞懵懂地看着刘萍，笨拙地<br />摇着头，含糊地说着：“不哭，不哭。”<br />　　5.残忍真相<br />　　转眼两年过去了，国民党节节败退，已经开始做退守台湾的准备了。但重庆作为中心，余党仍然不肯言<br />败，特务们也愈加疯狂，清除了大量反战人士和被怀疑是共产党的人。刘萍不顾暴露的危险，传递了大量的<br />信息，帮助共产党营救了很多进步人士。<br />　　这天她正在机要室工作，金角走进来说：“我刚从北平回来，很久没看王飞了，带我去看看他吧。”刘<br />萍交接了一下工作，带着金角回到家里。<br />　　几年间，金角经常来看望，王飞对金角也熟悉了，笑呵呵地看着他。金角脸色阴沉，看看外面，小声<br />说：“弟妹，赶紧收拾东西，我送你们出城。”<br />　　刘萍一愣：“怎么了？”金角看着她：“当着我的面你就别装了，上次糕饼店的事，我就有疑惑，因为<br />按刘峰当时的情况，是很难给突然接到的匿名举报电话录音的。当时给你解围后，我就暗中调查你。不过你<br />一直演得很好，我也没发现太多破绽。这段时间，你太急了，急就容易露出马脚。我知道你是共党的人，至<br />于什么时候开始的，我还不清楚。不过我既然能查出来，别人很快也会查出来。趁还来得及，赶紧走吧。”<br />　　刘萍沉默半晌：“你为什么要放过我？”金角苦笑着说：“人心都是肉长的，这几年的相处怎么说也有<br />感情了。不过最主要的，你是王飞的老婆，你要是死了，他也得死。如果是在前几年，我可能顾不了这些。<br />不过现在眼看败局已定，就是多杀一个你，又有什么用呢？”<br />　　刘萍抱住王飞的胳膊，轻声说：“谢谢你。”金角惨笑道：“我这身份未必能去得了台湾，上面还希望<br />我们这些特工继续潜伏呢。没准以后我就是死在你手上的人。不说这些了，都是命，走吧。”<br />　　刘萍和王飞被金角送出重庆，一路不停地直奔东北。此时东北已经解放了，刘萍找到组织，受到了热烈<br />欢迎。她留在当地工作，同时照顾王飞。对王飞，组织上只有一句话：“从他被注射了那药的时候，就已经<br />不再是哪个党派的人了，他是个民族英雄。”<br />　　很快，全国解放了，举国上下掀起了肃清敌特的行动。刘萍心里一直有一个念头在挣扎：她把自己背下<br />来的所有特务名单都交给了组织，唯独金角，她没有说。她知道这是对组织的不忠诚，但她真心希望金角去<br />了台湾，再也不要回大陆了。她知道，不管自己有没有说，其实组织上都不会不知道这个人，他是北平的金<br />角，是老牌的特务，早就挂在黑名单上了。自己不说，只是一个人最后的一点私心罢了。<br />　　一年后，金角落网了，他在企图破坏一个电厂时被捕。被抓捕后，他拒不交代有其他同伙，只是强调自<br />己在抗日斗争中立过功。经过公审后，政府决定判无期徒刑，进行劳动改造。金角没有什么反应，淡淡地说<br />道：“不枪毙我，已经很轻了。不过服刑前，我有个要求，就是写封信给一个老朋友，请帮我转达。”<br />　　很快，信送到了刘萍手里，但审查过信的领导对刘萍说：“这封信我看过了，我希望你不要再看了。有<br />些事，还是不知道比较好。”刘萍疑惑地看着领导，领导叹了口气，接着说：“当初我们两边怎么查都查不<br />到出卖王飞的内鬼，都觉得很奇怪。只要是内鬼，就不可能只行动一次，哪有这样的内鬼呢？可这个内鬼就<br />此销声匿迹了，好像从来不存在一样。直到看了这封信，我才明白，我们都想错了。根本就没有内鬼，又从<br />何查起呢？”<br />　　刘萍咬咬牙打开了信，她几乎是颤抖着看完的，看完后，她不知道是该哭还是该喊，也不知道是该恨还<br />是该同情。<br />　　的确，王飞是被内鬼出卖的，但这个内鬼却不是为日本人做事，而是为了中国人的战争胜利。王飞是被<br />精心挑选的牺牲品，是这盘棋局里的弃子。<br />　　金角截获过一份情报，是来自日本军部的。七三一部队用中国人做试验，研究了一种逼供用的催眠剂。<br />这种催眠剂药力极强，能让人把心底最想保守的秘密都吐露出来，这不是意志坚定就能顶住的，它不同于严<br />刑拷打，人可以用意志对抗，这是直接作用于人的大脑，作用于意志本身。这种药一旦获得认可批量生产，<br />中国的情报系统在日本人面前将不堪一击。唯一值得庆幸的是，这种药目前还没能批量生产的原因是副作用<br />极强，所有试验品无一例外都成了白痴。因此，日本人在犹豫该不该用，毕竟这是杀鸡取卵的做法，但他们<br />认为，如果药效有保证，能获得重大情报，还是可以先试用。金角苦思冥想了一晚上，一个让人震惊又恐怖<br />的计划形成了。<br />　　王飞是最年轻的银边，他是军校毕业的优秀特工，但参加工作不久，对北平的情报网尚不了解，一直跟<br />金角通过电台单线联系。<br />　　有一天，金角告诉王飞，是该见面的时候了，明天晚上去琉璃厂的雅古斋，那就是自己的据点，张老板<br />就是金角。这个日本人的销赃窝点，金角早就清楚，这次却意外地派上了用场。然后，金角给刘峰打了匿名<br />电话，告诉他王飞是北平的银边。刘峰果然马上出动，抓住了王飞，并且在照相馆里找到了足够的证据。接<br />下来，刘峰对王飞严刑拷打，要问出金角是谁。<br />　　王飞没有辜负金角的期望，在刘峰动用了所有酷刑后，王飞仍然一言不发。眼看已经过去了十个小时，<br />再拖下去金角就可能警觉并转移了，刘峰无奈之下让日本军医给王飞注射了药剂。王飞不是神仙，他钢铁般<br />的意志也无法抵抗那恶魔一般的药剂，他在昏昏沉沉中说出了自己拼死保护的“秘密”——雅古斋是据点，<br />张老板是金角。<br />　　接下来发生的一切都如金角所料，特高课和宪兵队狗咬狗，吃了大亏的刘峰理所当然地认为王飞顶住了<br />药剂，编了个假情报耍了自己。等他回去想要继续审问时，却发现王飞正如自己担心的那样，变成了白痴。<br />辛辛苦苦抓到的大鱼，最后什么都没得到，刘峰怒火冲天，写了份报告，证明这药剂对特工人员效果不佳，<br />且弊大于利，而那个现场的军医也成了最好的证人。就这样，这种药剂被放弃了。<br />　　一种可能终结中国情报史的药物，就在金角的死亡棋局中被消灭了。这是一场残酷的胜利，由于计划本<br />身的人性泯灭，金角没有向任何人汇报，这个永远也查不出来的内鬼，就这样消失了。而被称为民族英雄的<br />王飞，其实是最无辜的弃子。<br />　　围棋中，为了赢一盘棋，弃子是常见的，但当这颗棋子是一个满怀壮志、一心报国的人时，这样的做法<br />无疑变得残忍恐怖。<br />　　金角之所以一次次地营救王飞，甚至最后发展到保护刘萍，是因为他心里压着的秘密，每次想起都让他<br />呕吐不止。作为老牌特工，他杀人不眨眼，但亲手把自己的战友送进地狱，他从没做过。<br />　　在信的最后，金角对刘萍说：“我罪无可恕，但我不后悔。战争把我变成了魔鬼，但在看到你推着王飞<br />散步的那一刻，我泪流满面，因为我发现即使在那样恐怖的地狱里，仍然有天使存在。”<br />　　刘萍回到家时，王飞正在玩水，弄得满屋子都是，看见刘萍回来，畏缩地坐在地上，咧着嘴看着刘萍。<br />刘萍走过去抱着王飞，流着泪说：“不怕的，玩吧，我陪你玩。”王飞“呵呵”笑了，又玩起水来。<br />　　自由的天空中，艳阳高照，曾经饱受摧残的土地上，一片生机盎然.</p></div><div class="footer">故事会&nbsp;期数：2018年4月下</div></div>
+
+  
+
+
+  </article>
+  
+<br>
+
+  
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">智库</span><a href="/wiki/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/about/#comments">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/hermitlsr">GitHub</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<p>本站由 <a href="https://www.hermitlsr.top/">@hermitlee</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
+<p>本站托管于 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>，<a target="_blank" rel="noopener" href="https://github.com/">Github Page</a> ，使用 <a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral">又拍云</a> 作为图床。</p>
+<p>备案信息：渝ICP备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">2021006569</a>号，公安备<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">50011702500564</a>号，萌ICP备<a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20201324">20201324</a>号</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur","loadingImg":"https://fastly.jsdelivr.net/gh/hermitlsr/image-for-hermitlsr.top/web/lazyload_saber3.gif"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img","comment":{"enable":null,"selector":null}});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://fastly.jsdelivr.net/npm/twikoo@1.5.1/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://fastly.jsdelivr.net/npm/twikoo@1.5.1/dist/twikoo.all.min.js","envId":"hermitlsr-bbtalk-9f4eiau6c01d690"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
+
+
+
+<!-- inject -->
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="https://myhkw.cn/api/player/163072767496" id="myhk" key="163072767496" m="1"></script>
+</body>
+</html>
