@@ -192,7 +192,7 @@ var _hmt = _hmt || [];
 <p><code>kelecn</code> 在该项目上增加了QQ图标，不过好像大概就是换了下 <code>bitcoin.svg</code> logo，可看参考资料。</p>
 <p>我个人比较喜欢 <code>drink</code> 样式的背景，但又喜欢 <code>sample</code> 样式的白底彩色图标效果，就自己动动手把他们综合了一下，不过最后好像也只是换了下logo？</p>
 <p>最后它在我站点上的效果：</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/sponsor/20210814235243.png!watermark"/></div></div>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://doc.hermitlsr.top/post/sponsor/20210814235243.png!watermark" fancybox="true"/></div></div>
 <h2 id="1-修改"><a class="markdownIt-Anchor" href="#1-修改"></a> 1 修改</h2>
 <p>经过研究源代码，确定两种样式是独立的，他们的 <code>js</code> 和 <code>css</code> 并不相互共用，交叉使用的只是 <code>images</code> 。而仔细分析我的需求，只是展示样式的问题，并不涉及二维码的展示逻辑，所以重点在 <code>css</code> 的修改上。</p>
 <h3 id="11-css修改"><a class="markdownIt-Anchor" href="#11-css修改"></a> 1.1 css修改</h3>

@@ -101,8 +101,8 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys2.jpg">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys3.jpg">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys4.jpg">
-<meta property="article:published_time" content="2022-06-04T11:43:37.856Z">
-<meta property="article:modified_time" content="2022-06-04T11:43:37.856Z">
+<meta property="article:published_time" content="2022-06-06T10:39:28.061Z">
+<meta property="article:modified_time" content="2022-06-06T10:39:28.061Z">
 <meta property="article:author" content="hermitlee">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys1.png">
@@ -175,7 +175,7 @@ var _hmt = _hmt || [];
 
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">HERMITLEE</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">智库</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/git/">Git 实用教程</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-06-04T11:43:37.856Z">2022年6月4日</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">HERMITLEE</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">智库</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/git/">Git 实用教程</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-06-06T10:39:28.061Z">2022年6月6日</time></div></div>
 
   <article class='content md wiki'>
   <h1 class="article-title"><span>安装与配置</span></h1>
@@ -208,16 +208,16 @@ var _hmt = _hmt || [];
 <h2 id="git-ssh"><a class="markdownIt-Anchor" href="#git-ssh"></a> git-ssh</h2>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C user@example.com</span><br></pre></td></tr></table></figure>
 <p>其中 <code>user@example.com</code> 对应的是你的 Git 邮箱。</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys1.png" style="width:400px;"/></div></div>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys1.png" fancybox="true" style="width:400px;"/></div></div>
 <p>ssh-agent 是一种控制用来保存公钥身份验证所使用的私钥的程序，其实 ssh-agent 就是一个密钥管理器，运行 ssh-agent 以后，使用 ssh-add 将私钥交给 ssh-agent 保管，其他程序需要身份验证的时候可以将验证申请交给 ssh-agent 来完成整个认证过程。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(ssh-agent -s)&quot;</span><br></pre></td></tr></table></figure>
 <p>添加生成的 SSH key 到 ssh-agent：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys2.jpg" style="width:400px;"/></div></div>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys2.jpg" fancybox="true" style="width:400px;"/></div></div>
 <p>登陆 Github，添加 ssh：</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys3.jpg" style="width:400px;"/></div></div>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys3.jpg" fancybox="true" style="width:400px;"/></div></div>
 <p>把 id_rsa.pub 文件里的内容复制到这里：</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys4.jpg" style="width:400px;"/></div></div>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys4.jpg" fancybox="true" style="width:400px;"/></div></div>
 
   
 
