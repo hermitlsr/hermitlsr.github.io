@@ -343,6 +343,16 @@ article.md .highlight .gutter+.code pre {
 table:not([class]) {
   border-collapse: collapse;
 }
+article.md pre >.caption {
+  color: var(--text-p3);
+}
+article.md pre >.hljs {
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--block-border);
+  line-height: 1.5;
+  box-sizing: border-box;
+}
 article.md .highlight .code {
   vertical-align: top;
 }
