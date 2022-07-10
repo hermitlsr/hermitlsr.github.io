@@ -1755,6 +1755,8 @@ details.folding[open] >summary:hover:after {
   content: '-';
 }
 details.folding[open] >div.body {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   margin: -1rem;
   margin-top: 0;
@@ -3818,6 +3820,11 @@ article.md.error-page a#back {
   font-size: 8px !important;
   margin: 15px auto !important;
   text-align: center !important;
+}
+@media screen and (max-width: 768px) {
+  .md p.katex-block {
+    overflow: scroll;
+  }
 }
 article.md {
   max-width: 100%;
