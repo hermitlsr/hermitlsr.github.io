@@ -257,7 +257,7 @@ li>code:not([class]) {
   border-radius: 4px;
 }
 article.md .highlight,
-.tag-plugin pre:not([class]) {
+pre:not([class]):has(>code) {
   margin: var(--gap-p) 0;
   border-radius: 6px;
   overflow: hidden;
@@ -269,7 +269,7 @@ article.md .highlight,
 }
 @media screen and (min-width: 500px) {
   article.md .highlight,
-  .tag-plugin pre:not([class]) {
+  pre:not([class]):has(>code) {
     min-width: 280px;
   }
 }
@@ -602,7 +602,6 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  scroll-behavior: smooth;
 }
 body {
   background: var(--site-bg);
@@ -672,12 +671,12 @@ svg.loading {
     transform: rotate(360deg);
   }
 }
-.tag-plugin pre:not([class]) {
+pre:not([class]):has(>code) {
   display: block;
   padding: 1rem;
   overflow: scroll;
 }
-.tag-plugin pre:not([class]) code {
+pre:not([class]):has(>code) code {
   padding: 0;
 }
 span.dot,
