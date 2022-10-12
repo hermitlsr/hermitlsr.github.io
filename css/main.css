@@ -671,6 +671,11 @@ svg.loading {
     transform: rotate(360deg);
   }
 }
+.loading-wrap {
+  min-height: 50px;
+  margin: 2rem 0;
+  text-align: center;
+}
 pre:not([class]):has(>code) {
   display: block;
   padding: 1rem;
@@ -1354,9 +1359,6 @@ nav.cap a+a {
 .related-wrap#comments div.cmt-body svg.loading {
   top: 60px;
 }
-article.md.content>.tag-plugin.about:first-child {
-  margin-top: 0;
-}
 .tag-plugin.about {
   background: var(--block);
   border-radius: 12px;
@@ -1394,21 +1396,18 @@ article.md.content>.tag-plugin.about:first-child {
 }
 .tag-plugin.about .about-body .tag-plugin.navbar:last-child nav.cap {
   margin-top: 1rem;
+  background: var(--card);
+  border: 1px solid var(--block-border);
 }
 .tag-plugin.about .about-body .tag-plugin.navbar:last-child nav.cap a {
-  margin: 0;
   color: #2196f3;
-  background: var(--block-hover);
-}
-.tag-plugin.about .about-body .tag-plugin.navbar:last-child nav.cap a.active {
-  background: none;
 }
 .tag-plugin.about .about-body .tag-plugin.navbar:last-child nav.cap a:hover {
-  color: #ff5722;
-  background: var(--block-border);
+  background: var(--block);
 }
-.tag-plugin.about .about-body .tag-plugin.navbar:last-child nav.cap a+a {
-  margin-left: 0.5rem;
+.tag-plugin.about .about-body .tag-plugin.navbar:last-child nav.cap a.active {
+  background: var(--block);
+  box-shadow: none;
 }
 .tag-plugin.about .about-header+.about-body {
   margin-top: 1.5rem;
@@ -2511,11 +2510,6 @@ article.md.content h1.quot[type=text]:after {
 .sites-wrap .stellar-sites-api {
   display: block;
 }
-.sites-wrap .stellar-sites-api .loading-wrap {
-  min-height: 50px;
-  margin: 2rem 0;
-  text-align: center;
-}
 .sites-wrap .group-body {
   display: grid;
   grid-gap: 1rem 1rem;
@@ -2735,6 +2729,12 @@ article.md.content h1.quot[type=text]:after {
   border-radius: 8px;
   top: 0.5rem;
   bottom: 0;
+}
+.md .tag-plugin.timeline:has(.loading-wrap) {
+  padding-left: 0;
+}
+.md .tag-plugin.timeline:has(.loading-wrap):before {
+  display: none;
 }
 .tag-plugin.timeline .timenode {
   position: relative;
@@ -4097,7 +4097,7 @@ article.md.content.indent >h2:not([class]) {
   border-bottom-color: #ff5722;
 }
 article.md.content >:first-child {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 article.md.content h1:not(:first-child) {
   margin-top: 2em;
