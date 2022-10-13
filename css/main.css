@@ -17,6 +17,16 @@
     --gap-l: 64px;
   }
 }
+@media screen and (max-width: 768px) {
+  :root {
+    --width-left: 220px;
+  }
+}
+@media screen and (max-width: 667px) {
+  :root {
+    --width-left: 256px;
+  }
+}
 :root {
   --site-bg: #f8f8f8;
   --block: #f2f2f2;
@@ -1362,12 +1372,13 @@ nav.cap a+a {
 .tag-plugin.about {
   background: var(--block);
   border-radius: 12px;
-  padding: 3rem 2rem 2rem;
+  padding: 2rem;
 }
 .tag-plugin.about .about-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  margin: 1.5rem 0 3rem;
 }
 .tag-plugin.about .about-header img {
   object-fit: contain;
@@ -1394,13 +1405,16 @@ nav.cap a+a {
 .tag-plugin.about .about-body >p {
   line-height: 1.5;
 }
+.tag-plugin.about .about-body .tag-plugin.navbar:last-child {
+  text-align: center;
+}
 .tag-plugin.about .about-body .tag-plugin.navbar:last-child nav.cap {
   margin-top: 1rem;
   background: var(--card);
-  border: 1px solid var(--block-border);
+  box-shadow: 0 0 2px 0px rgba(0,0,0,0.04), 0 0 8px 0px rgba(0,0,0,0.04);
 }
 .tag-plugin.about .about-body .tag-plugin.navbar:last-child nav.cap a {
-  color: #2196f3;
+  color: var(--text-p2);
 }
 .tag-plugin.about .about-body .tag-plugin.navbar:last-child nav.cap a:hover {
   background: var(--block);
@@ -1414,7 +1428,10 @@ nav.cap a+a {
 }
 @media screen and (max-width: 500px) {
   .tag-plugin.about {
-    padding: 2rem 1rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .tag-plugin.about .about-header {
+    margin: 2.5rem 0 3rem;
   }
   .tag-plugin.about .about-header p {
     width: 100%;
@@ -1902,11 +1919,6 @@ details.folding[child=codeblock]>div.body .highlight .code:before {
 .users-wrap .stellar-friends-api {
   display: block;
 }
-.users-wrap .stellar-friends-api .loading-wrap {
-  min-height: 50px;
-  margin: 2rem 0;
-  text-align: center;
-}
 .users-wrap .user-card {
   flex-shrink: 1;
   display: flex;
@@ -2038,6 +2050,7 @@ details.folding[child=codeblock]>div.body .highlight .code:before {
   border-bottom: 2px solid #ff5722;
 }
 .md emp {
+  width: fit-content;
   text-decoration: none;
   border-bottom: 4px dotted #ff5722;
 }
@@ -2714,6 +2727,12 @@ article.md.content h1.quot[type=text]:after {
 .tag-plugin.tabs .tab-content .tab-pane.active {
   display: block;
 }
+.md.indent .tag-plugin.tabs .tab-content p:not([class]) {
+  text-indent: calc(0.9375rem * 2);
+}
+.md .tag-plugin.folding .body:has(.timeline) {
+  background: var(--site-bg);
+}
 .md .tag-plugin.timeline {
   position: relative;
   margin-top: 0;
@@ -3148,7 +3167,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   padding-top: calc(2 * var(--gap-l));
   height: calc(100vh - 3 * var(--gap-l));
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 667px) {
   .l_left {
     padding-top: calc(1 * var(--gap-l));
     height: calc(100% - 2 * var(--gap-l));
@@ -3158,7 +3177,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   padding-bottom: 0;
   height: calc(100vh - 2 * var(--gap-l));
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 667px) {
   .l_left[layout=wiki] {
     height: calc(100% - 1 * var(--gap-l));
   }
@@ -3250,7 +3269,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   font-weight: 900;
   color: inherit;
   line-height: 1.2;
-  font-family: HarmonyOS_Regular;
+  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
   display: block;
   position: relative;
 }
@@ -3768,11 +3787,6 @@ article.md.error-page a#back {
   width: 320px;
   max-width: var(--width-main);
 }
-@media screen and (max-width: 768px) {
-  :root {
-    --width-left: 220px;
-  }
-}
 @media screen and (max-width: 667px) {
   .mobile-only {
     display: block !important;
@@ -3996,7 +4010,7 @@ article.md.error-page a#back {
     margin-right: calc(2 * var(--gap-l) + var(--width-left) / 2);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 667px) {
   .l_main {
     padding-top: calc(2 * var(--gap-l));
   }
