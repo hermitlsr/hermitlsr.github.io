@@ -85,11 +85,8 @@ a {
 a:hover {
   color: #ff5722;
 }
-p:not([class]) a:not([class]),
-li:not([class]) a:not([class]) {
-  margin: 0 1px;
-  padding: 2px;
-  text-decoration: underline;
+p:not([class]) {
+  text-align: justify;
 }
 hr {
   color: var(--text-meta);
@@ -257,7 +254,6 @@ code {
   -moz-osx-font-smoothing: auto;
   color: var(--text-code);
   font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
-  word-break: break-all;
 }
 p>code:not([class]),
 li>code:not([class]) {
@@ -612,6 +608,7 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 body {
   background: var(--site-bg);
@@ -1053,15 +1050,6 @@ div.toast {
 .page-footer .text a:not([class]) {
   text-decoration: underline;
   font-weight: 500;
-  margin: inherit;
-  padding: inherit;
-}
-.page-footer .text a:not([class]):after {
-  display: none;
-}
-.page-footer .text a:not([class]):hover {
-  background: inherit;
-  color: #ff5722;
 }
 .nav-wrap {
   position: sticky;
@@ -2133,7 +2121,7 @@ details.folding[child=codeblock]>div.body .highlight .code:before {
   display: flex;
   justify-content: center;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .md .tag-plugin.link {
     width: 100%;
   }
@@ -2171,6 +2159,7 @@ details.folding[child=codeblock]>div.body .highlight .code:before {
   flex-direction: column;
   align-items: stretch;
   width: 400px;
+  text-align: justify;
 }
 .md .link-card {
   line-height: 1.2;
@@ -2730,6 +2719,9 @@ article.md.content h1.quot[type=text]:after {
 .md.indent .tag-plugin.tabs .tab-content p:not([class]) {
   text-indent: calc(0.9375rem * 2);
 }
+.md.indent .tag-plugin.tabs .tab-content p:not([class]) a {
+  text-indent: 0;
+}
 .md .tag-plugin.folding .body:has(.timeline) {
   background: var(--site-bg);
 }
@@ -2847,11 +2839,17 @@ article.md.content h1.quot[type=text]:after {
 }
 .tag-plugin.timeline.stellar-timeline-api .body p.title {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
   padding: 0.5rem 0 0.75rem;
   line-height: 1.25;
   border-bottom: 1px dashed var(--block-border);
+}
+.tag-plugin.timeline.stellar-timeline-api .body p.title a {
+  color: inherit;
+}
+.tag-plugin.timeline.stellar-timeline-api .body p.title a:hover {
+  color: #ff5722;
 }
 .tag-plugin.timeline.stellar-timeline-api .body pre code {
   font-size: 0.75rem;
@@ -2876,20 +2874,13 @@ article.md.content h1.quot[type=text]:after {
 .tag-plugin.timeline.stellar-timeline-api .body .footer:empty {
   display: none;
 }
-.tag-plugin.timeline.stellar-timeline-api .body .footer a.comments {
-  margin-right: 0;
-}
 .tag-plugin.timeline.stellar-timeline-api .body .footer .flex {
   display: flex;
   flex-wrap: wrap;
   font-size: 0.75rem;
   align-items: stretch;
 }
-.tag-plugin.timeline.stellar-timeline-api .body .footer .flex .reaction {
-  border-color: var(--block);
-  border-style: dashed;
-}
-.tag-plugin.timeline.stellar-timeline-api .body .footer .flex .item {
+.tag-plugin.timeline.stellar-timeline-api .body .footer .item {
   border-width: 1px;
   border-style: solid;
   margin: 2px;
@@ -2898,34 +2889,14 @@ article.md.content h1.quot[type=text]:after {
   display: flex;
   align-items: center;
 }
-.tag-plugin.timeline.stellar-timeline-api .body .footer .flex .item.comments {
-  border-width: 0;
-}
-.tag-plugin.timeline.stellar-timeline-api .body .footer .flex .item:first-child {
+.tag-plugin.timeline.stellar-timeline-api .body .footer .item:first-child {
   margin-left: 0;
 }
-.tag-plugin.timeline.stellar-timeline-api .body .footer .flex .item:last-child {
+.tag-plugin.timeline.stellar-timeline-api .body .footer .item:last-child {
   margin-right: 0;
 }
-.tag-plugin.timeline.stellar-timeline-api .body .footer .flex .item .key {
-  margin-right: 4px;
-}
-.tag-plugin.timeline.stellar-timeline-api .body .footer a.comments {
-  border-radius: 4px;
-  padding: 0 0.5rem;
-  color: #fff;
-  transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  margin-left: 2px;
-  background: #1bcdfc;
-}
-.tag-plugin.timeline.stellar-timeline-api .body .footer a.comments .key {
-  margin-right: 4px;
-}
-.tag-plugin.timeline.stellar-timeline-api .body .footer a.comments:hover {
-  background: #ff5722;
+.tag-plugin.timeline.stellar-timeline-api .body .footer .reaction {
+  border-color: var(--block);
 }
 details.toc {
   background: var(--block);
@@ -4097,6 +4068,9 @@ article.md.content.indent >p:not([class]) {
   text-indent: calc(0.9375rem * 2);
   text-align: justify;
 }
+article.md.content.indent >p:not([class]) a {
+  text-indent: 0;
+}
 article.md.content.indent h1,
 article.md.content.indent h2,
 article.md.content.indent h3,
@@ -4248,14 +4222,17 @@ article.md img {
 article.md p:not([class]) a:not([class]),
 article.md li:not([class]) a:not([class]) {
   position: relative;
+  padding: 2px;
   text-decoration: none;
+  display: inline-block;
+  line-height: 1.2;
 }
 article.md p:not([class]) a:not([class]):after,
 article.md li:not([class]) a:not([class]):after {
   content: '';
   position: absolute;
   border-radius: 2px;
-  bottom: 0;
+  bottom: 1px;
   left: 2px;
   right: 2px;
   height: 1px;
